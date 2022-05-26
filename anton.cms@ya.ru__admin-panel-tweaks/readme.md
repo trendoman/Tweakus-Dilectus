@@ -1,4 +1,4 @@
-## Admin Panel Tweaks
+# Admin Panel Tweaks
 
 This is a collection of various addons and codes for CouchCMS.
 
@@ -6,6 +6,25 @@ Look for a dedicated *`__readme__`* files in subfolders to learn more about each
 
 Thanks to `__autoload.php`, every `.php` file from all subfolders is preloaded when CouchCMS boots.
 
+## Links to Readme
+
+- [alert-aligned](alert-aligned/__readme__alert-aligned.md)
+- [config_xxxx_view](config_xxxx_view/__readme__clean-up-template-configs.md)
+- [repeatable-region](repeatable-region/__readme__repeatable-tweaks.md)
+- template-list/
+    - [default-page-short-title](template-list/__readme__default-page-short-title.md)
+    - [default-page-unpublish](template-list/__readme__default-page-unpublish.md)
+    - [tweak-date-display-format-globally](template-list/__readme__tweak-date-display-format-globally.md)
+    - [tweak-users-list-view](template-list/__readme__tweak-users-list-view.md)
+    - [tweak-list-limit-globally](template-list/__readme__tweak-list-limit-globally.md)
+    - [tweak-title-visible-length](template-list/__readme__tweak-title-visible-length.md)
+- ~sidebar/
+    - [add-items](~sidebar/__readme__add-items.md)
+    - [add-separator](~sidebar/__readme__add-separator.md)
+    - [alter-items](~sidebar/__readme__alter-items.md)
+    - [hide-items](~sidebar/__readme__hide-items.md)
+- ~template-edit/
+    - [translit-cyrillic](~template-edit/__readme__translit-cyrillic.md)
 
 ## Installation
 
