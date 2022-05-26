@@ -1,2 +1,4 @@
-# Best tweaks and addons for CouchCMS
+# Tweakus Dilectus
+
+Simply the best tweaks and addons for CouchCMS.
 
