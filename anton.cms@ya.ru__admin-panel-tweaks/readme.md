@@ -28,8 +28,8 @@ Thanks to `__autoload.php`, every `.php` file from all subfolders is preloaded w
 
 ## Installation
 
-1. Place current folder into `/couch/addons`
-2. Put this line to `/couch/addons/kfunctions.php`
+1. Place current folder into &ndash; `couch/addons`
+2. Put this line to &ndash; `couch/addons/kfunctions.php`
 ```php
 require_once( K_COUCH_DIR.'addons/anton.cms@ya.ru__admin-panel-tweaks/__autoload.php' );
 ```
