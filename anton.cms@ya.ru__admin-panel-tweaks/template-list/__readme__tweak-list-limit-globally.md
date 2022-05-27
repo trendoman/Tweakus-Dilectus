@@ -1,6 +1,6 @@
 ## Number of listed pages
 
-Tweaks the number of pages visible in one list view screen **globally**. Default number is 15.
+Tweaks the number of pages visible in one list view screen **globally**. Default number is 25.
 
 So it allows to define global limit for **all clonable templates** to save time.
 

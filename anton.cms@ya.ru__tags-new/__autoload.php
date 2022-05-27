@@ -29,8 +29,7 @@
         // __DIR__.DIRECTORY_SEPARATOR.'vendor',
     ));
 
-    $dir_iterator = new RecursiveDirectoryIterator( __DIR__, FilesystemIterator::SKIP_DOTS );
-    $iterator->append(new RecursiveIteratorIterator( $dir_iterator ));
+    $iterator = new RecursiveDirectoryIterator( __DIR__, FilesystemIterator::SKIP_DOTS );
     foreach ($iterator as $file) {
         $pathname = $file->getPathname();
         if( strpos($pathname, '~') !== false ) continue;
