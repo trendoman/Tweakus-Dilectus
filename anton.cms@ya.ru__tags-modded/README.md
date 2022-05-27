@@ -1,0 +1,56 @@
+# [Modded Existing Tags](https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms%40ya.ru__tags-modded)
+
+#### This is a collection of mods for CouchCMS Tags.
+> First time? Visit [CouchCMS website](couchcms.com/) to enjoy this TIME-TESTED AND SECURE CMS. It's perfect for designers and is open source! See its [GitHub Repo](https://github.com/CouchCMS/CouchCMS).
+
+Look for a dedicated *`__readme__`* files for each modded tag to learn more about each tweak. And/or check the code.
+
+Thanks to `__autoload.php`, every `.php` file is preloaded when CouchCMS boots.
+
+## Content
+
+- modded `<cms:func>` &ndash; [readme](__readme__func.md)
+- modded `<cms:show>` &ndash; [readme](__readme__show.md)
+
+## Installation
+
+1. Place current folder into &ndash; `couch/addons`
+2. Put this line to &ndash; `couch/addons/kfunctions.php`
+```php
+require_once( K_COUCH_DIR.'addons/anton.cms@ya.ru__tags-modded/__autoload.php' );
+```
+Advice: Check out **Extended KFunctions** [repository](https://github.com/trendoman/Extended-KFunctions) &ndash; it has everything packed neatly.
+3. Make sure the folder/file name <span style="color:coral">does not contain `~` symbol</span> in path. Otherwise, tweak will not be active.
+
+## How autoload works?
+
+Simply put, autoload helps to have every tweak/addon in a separate file.
+
+Files are dropped in subfolders and all works without adding additional lines to `/couch/addons/kfunctions.php`.
+
+Since everything is in separate files it is easy to &mdash;
+
++ archive tweaks/addons
++ move to a new installation
++ quickly disable some tweak (read below)
++ share with others and have cleaner code
+
+Autoload works like this:
+
+1. Code traverses all subfolders recursively and loads all found files with `*.php` extension.
+2. Only files that <span style="color:coral">*do not contain*</span> `~` symbol are processed.
+    - can rename a file or folder (by adding a symbol `"~"`)  to skip from loading. As in &mdash; `mycode.php` &rArr; `~mycode.php`
+    - rename a `.php` file to another valid extenstion `.php5` and it will also be skipped.
+
+## Support
+
+Donations are desperately welcomed to keep up with support requests; to continue receiving your [thankyou's](https://github.com/trendoman/Dignotas) &mdash;
+
+**Bitcoin**: bc1qsl2tulmsjcvpkegepeunmumz599yz0lhuktdjt
+
+Ask any question via forum or email &mdash; <anton.cms@ya.ru>, <tony.smirnov@gmail.com> &mdash; Anton S aka Trendoman<br>
+You'll get *a good meaningful* reply.
+
+My CouchCMS forum posts: https://www.couchcms.com/forum/search.php?author_id=18478&sr=posts
+
+New Telegram channel: https://t.me/couchcms
