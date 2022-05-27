@@ -3,8 +3,6 @@
     /**
     *   List-view: Define global limit for all clonable templates if not set explicitly via <cms:config_list_view limit='' />
     *
-    *   @category Backend Mods
-    *   @link
     *   @author Anton S aka Trendoman <tony.smirnov@gmail.com>
     *   @date   21.06.2019
     */
@@ -25,3 +23,17 @@
         }
         $tpl->arr_config = $arr_config;
     }
+
+
+    /*
+    // ~~~~~~~~~~~~~
+    // Credits
+    // ~~~~~~~~~~~~~
+    // You should have downloaded this code from https://github.com/trendoman
+    // ~~~~~~~~~~~~~
+    // Support
+    // ~~~~~~~~~~~~~
+    // Ask any question via forum or email <anton.cms@ya.ru>, <tony.smirnov@gmail.com> "Anton S aka Trendoman"
+    // My CouchCMS forum posts: https://www.couchcms.com/forum/search.php?author_id=18478&sr=posts
+    // New Telegram channel: https://t.me/couchcms
+    */

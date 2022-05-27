@@ -10,18 +10,22 @@ Even if you set a new globally-applied number via this tweak you can still overr
 ```
 The code above will set a limit for a single template, where the tag appears.
 
+## Support
 
-```txt
-@category Backend Mods
-@link
-@author Anton S aka Trendoman <tony.smirnov@gmail.com>
-@date   21.06.2019
-```
+Donations are desperately welcomed to keep up with support requests; to continue receiving your [thankyou's](https://github.com/trendoman/Dignotas) &mdash;
 
-## Credits
+**Bitcoin**: bc1qsl2tulmsjcvpkegepeunmumz599yz0lhuktdjt
 
-Send me your thoughts to <tony.smirnov@gmail.com> &mdash; Anton S aka Trendoman
+Ask any question via forum or email &mdash; <anton.cms@ya.ru>, <tony.smirnov@gmail.com> &mdash; Anton S aka Trendoman<br>
+You'll get *a good meaningful* reply within hours.
 
 My CouchCMS forum posts: https://www.couchcms.com/forum/search.php?author_id=18478&sr=posts
 
-Telegram channel: https://t.me/couchcms
+New Telegram channel: https://t.me/couchcms
+
+---
+
+```txt
+@author Anton S aka Trendoman <tony.smirnov@gmail.com>
+@date   21.06.2019
+```

@@ -2,13 +2,11 @@
     if( !defined('K_ADMIN') ) return;
 
     /**
-    *   Override '- No Data -' message
-    *   Add empty row to DOM if no data present
-    *   Disable default row -- !!Fixed in CouchCMS!!
-    *   Avoid empty-row DOM jumping
+    *   1. Override '- No Data -' message
+    *   2. Add empty row to DOM if no data present
+    *   3. Disable default row -- !!Fixed in CouchCMS!!
+    *   4. Avoid empty-row DOM jumping
     *
-    *   @category AdminPanel RepeatableRegion customization.
-    *   @link
     *   @author Antony S aka Trendoman <tony.smirnov@gmail.com>
     *   @date   16.06.2020
     *   @last   26.05.2022
@@ -83,3 +81,17 @@
 
         $FUNCS->add_js( $js );
     });
+
+
+    /*
+    // ~~~~~~~~~~~~~
+    // Credits
+    // ~~~~~~~~~~~~~
+    // You should have downloaded this code from https://github.com/trendoman
+    // ~~~~~~~~~~~~~
+    // Support
+    // ~~~~~~~~~~~~~
+    // Ask any question via forum or email <anton.cms@ya.ru>, <tony.smirnov@gmail.com> "Anton S aka Trendoman"
+    // My CouchCMS forum posts: https://www.couchcms.com/forum/search.php?author_id=18478&sr=posts
+    // New Telegram channel: https://t.me/couchcms
+    */

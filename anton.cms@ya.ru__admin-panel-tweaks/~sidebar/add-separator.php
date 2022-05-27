@@ -4,7 +4,6 @@
     *   'Separator' entry is just a little spacer between templates in the sidebar section.
     *   Can be placed inside a collapsible folder and aligned by weight.
     *
-    *   @category AdminPanel Sidebar customization.
     *   @link   https://www.couchcms.com/forum/viewtopic.php?f=8&t=9887
     *   @author @trendoman <tony.smirnov@gmail.com>
     *   @date   21.01.2020
@@ -24,3 +23,17 @@
         // @example <cms:if k_menu_class eq 'my-separator'>..</cms:if>
     });
 
+
+    /*
+    // ~~~~~~~~~~~~~
+    // Credits
+    // ~~~~~~~~~~~~~
+    // You should have downloaded this code from https://github.com/trendoman
+    // @author Anton S aka Trendoman <tony.smirnov@gmail.com>
+    // ~~~~~~~~~~~~~
+    // Support
+    // ~~~~~~~~~~~~~
+    // Ask any question via forum or email <anton.cms@ya.ru>, <tony.smirnov@gmail.com> "Anton S aka Trendoman"
+    // My CouchCMS forum posts: https://www.couchcms.com/forum/search.php?author_id=18478&sr=posts
+    // New Telegram channel: https://t.me/couchcms
+    */

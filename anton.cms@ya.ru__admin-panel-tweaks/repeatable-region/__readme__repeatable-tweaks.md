@@ -12,30 +12,32 @@ There was another tweak that allowed to disable a default empty row, but thanks 
 <cms:repeatable ... no_default_row = '1'>
 ```
 
+## Support
+
+Donations are desperately welcomed to keep up with support requests; to continue receiving your [thankyou's](https://github.com/trendoman/Dignotas) &mdash;
+
+**Bitcoin**: bc1qsl2tulmsjcvpkegepeunmumz599yz0lhuktdjt
+
+Ask any question via forum or email &mdash; <anton.cms@ya.ru>, <tony.smirnov@gmail.com> &mdash; Anton S aka Trendoman<br>
+You'll get *a good meaningful* reply within hours.
+
+My CouchCMS forum posts: https://www.couchcms.com/forum/search.php?author_id=18478&sr=posts
+
+New Telegram channel: https://t.me/couchcms
+
+---
+
 ```txt
-@category AdminPanel RepeatableRegion customization.
-@link
 @author Antony S aka Trendoman <tony.smirnov@gmail.com>
 @date   16.06.2020
 @last   26.05.2022
 ```
 
+## A letter from CouchCMS Original Developer
 
-## Credits
-
-Send me your thoughts to <tony.smirnov@gmail.com> &mdash; Anton S aka Trendoman
-
-My CouchCMS forum posts: https://www.couchcms.com/forum/search.php?author_id=18478&sr=posts
-
-Telegram channel: https://t.me/couchcms
-
-
-## A letter from KK
-
-> Unlike most other editable regions, RR does not lend its render routine to overriding.<br><br>
-Also, the fact that `<cms:repeatable>` tag internally calls a a hidden editable region named '__repeatable' also complicates things a little.<br><br>
-As you can see, we have defined our own class `'MyRepeatable'` that extends the core `'Repeatable'` class.<br><br>
-We are only interested in the `_render()` function - in the code above the function is simply calling the original core routine of its parent so should work exactly the same as before.<br><br>
+> Unlike most other editable regions, RR does not lend its render routine to overriding.
+Also, the fact that `<cms:repeatable>` tag internally calls a a hidden editable region named '__repeatable' also complicates things a little.<br>
+> As you can see, we have defined our own class `'MyRepeatable'` that extends the core `'Repeatable'` class. We are only interested in the `_render()` function - in the code above the function is simply calling the original core routine of its parent so should work exactly the same as before.<br>
 You can instead, now copy/paste here the original code and tweak it to your liking.
 
 ```php

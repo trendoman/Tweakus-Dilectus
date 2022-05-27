@@ -3,8 +3,6 @@
     /**
     *   A clonable template's first page now gets auto-un-published in case template was converted from non-clonable.
     *
-    *   @category Backend Mods
-    *   @link
     *   @author Kamran Kashif aka KK <kksidd@couchcms.com>
     *   @date   11.06.2019
     */
@@ -37,3 +35,17 @@
             if( $rs==-1 ) die( "ERROR: Unable to change publish status of masterpage" );
         }
     }
+
+
+    /*
+    // ~~~~~~~~~~~~~
+    // Credits
+    // ~~~~~~~~~~~~~
+    // You should have downloaded this code from https://github.com/trendoman
+    // ~~~~~~~~~~~~~
+    // Support
+    // ~~~~~~~~~~~~~
+    // Ask any question via forum or email <anton.cms@ya.ru>, <tony.smirnov@gmail.com> "Anton S aka Trendoman"
+    // My CouchCMS forum posts: https://www.couchcms.com/forum/search.php?author_id=18478&sr=posts
+    // New Telegram channel: https://t.me/couchcms
+    */

@@ -11,7 +11,6 @@
     *   $html = $FUNCS->date( $publish_date, "d.m.Y" );
     *   $html = $FUNCS->date( $mod_date, "d.m.Y @ H:i" );
     *
-    *   @category Backend Mods
     *   @link   https://www.couchcms.com/forum/viewtopic.php?f=4&t=11313&p=30107#p30107
     *   @author Kamran Kashif aka KK <kksidd@couchcms.com>
     *   @author Anton S aka Trendoman <tony.smirnov@gmail.com>
@@ -51,3 +50,18 @@
             return $html;
         }
     }
+
+
+    /*
+    // ~~~~~~~~~~~~~
+    // Credits
+    // ~~~~~~~~~~~~~
+    // You should have downloaded this code from https://github.com/trendoman
+    // ~~~~~~~~~~~~~
+    // Support
+    // ~~~~~~~~~~~~~
+    // Ask any question via forum or email <anton.cms@ya.ru>, <tony.smirnov@gmail.com> "Anton S aka Trendoman"
+    // My CouchCMS forum posts: https://www.couchcms.com/forum/search.php?author_id=18478&sr=posts
+    // New Telegram channel: https://t.me/couchcms
+    */
+

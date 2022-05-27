@@ -3,8 +3,6 @@
     /**
     *   Add new sidebar sections.
     *
-    *   @category Backend Mods
-    *   @link
     *   @author Kamran Kashif aka KK <kksidd@couchcms.com>
     *   @date   11.06.2019
     */
@@ -17,3 +15,16 @@
         // Example of a new sidebar section 'MyFolder' which can be used as a parent for templates - <cms:template ... parent='_myfolder_' ... />
         $FUNCS->register_admin_menuitem( array('name'=>'_myfolder_', 'title'=>'MyFolder', 'is_header'=>'1', 'weight'=>'-1')  );
     });
+
+    /*
+    // ~~~~~~~~~~~~~
+    // Credits
+    // ~~~~~~~~~~~~~
+    // You should have downloaded this code from https://github.com/trendoman
+    // ~~~~~~~~~~~~~
+    // Support
+    // ~~~~~~~~~~~~~
+    // Ask any question via forum or email <anton.cms@ya.ru>, <tony.smirnov@gmail.com> "Anton S aka Trendoman"
+    // My CouchCMS forum posts: https://www.couchcms.com/forum/search.php?author_id=18478&sr=posts
+    // New Telegram channel: https://t.me/couchcms
+    */

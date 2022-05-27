@@ -2,11 +2,9 @@
 
     /**
     *   Update template's settings if cms:config_list_view / cms:config_form_view were removed from cms:template.
-    *   By default CouchCMS can not 'see' removed tags and keeps old values in database. 
-	*	So this mod allows to clean saved values from database when the tag/tags are not present.
+    *   By default CouchCMS can not 'see' removed tags and keeps old values in database.
+    *	So this mod allows to clean saved values from database when the tag/tags are not present.
     *
-    *   @category Backend Mods
-    *   @link
     *   @author Anton Smirnov aka Trendoman <tony.smirnov@gmail.com>
     *   @date   12.06.2019
     *   @last   14.02.2020
@@ -55,3 +53,17 @@
 
         return false;
     }
+
+
+    /*
+    // ~~~~~~~~~~~~~
+    // Credits
+    // ~~~~~~~~~~~~~
+    // You should have downloaded this code from https://github.com/trendoman
+    // ~~~~~~~~~~~~~
+    // Support
+    // ~~~~~~~~~~~~~
+    // Ask any question via forum or email <anton.cms@ya.ru>, <tony.smirnov@gmail.com> "Anton S aka Trendoman"
+    // My CouchCMS forum posts: https://www.couchcms.com/forum/search.php?author_id=18478&sr=posts
+    // New Telegram channel: https://t.me/couchcms
+    */

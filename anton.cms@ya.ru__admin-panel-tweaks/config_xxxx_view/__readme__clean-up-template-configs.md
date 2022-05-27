@@ -30,14 +30,6 @@ This little addon makes sure the values are cleaned up properly.
 
 **NOTE:** Alternatively, you may just leave tags without parameters within `cms:template` block and that will re-set the values. Actually, that's exactly what this addon does.
 
-```txt
-@category Backend Mods
-@link
-@author "Anton Smirnov aka Trendoman" <tony.smirnov@gmail.com>
-@date   12.06.2019
-@last   14.02.2020
-```
-
 ### Logic of PHP code:
 
 1. When tag `:config_list_view` or `:config_form_view` is executed we set a flag.
@@ -50,10 +42,23 @@ This little addon makes sure the values are cleaned up properly.
 ```
 because tag's native code will handle the db update naturally.
 
-## Credits
+## Support
 
-Send me your thoughts to <tony.smirnov@gmail.com> &mdash; Anton S aka Trendoman
+Donations are desperately welcomed to keep up with support requests; to continue receiving your [thankyou's](https://github.com/trendoman/Dignotas) &mdash;
+
+**Bitcoin**: bc1qsl2tulmsjcvpkegepeunmumz599yz0lhuktdjt
+
+Ask any question via forum or email &mdash; <anton.cms@ya.ru>, <tony.smirnov@gmail.com> &mdash; Anton S aka Trendoman<br>
+You'll get *a good meaningful* reply within hours.
 
 My CouchCMS forum posts: https://www.couchcms.com/forum/search.php?author_id=18478&sr=posts
 
-Telegram channel: https://t.me/couchcms
+New Telegram channel: https://t.me/couchcms
+
+---
+
+```txt
+@author "Anton Smirnov aka Trendoman" <tony.smirnov@gmail.com>
+@date   12.06.2019
+@last   14.02.2020
+```

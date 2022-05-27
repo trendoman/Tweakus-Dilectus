@@ -1,4 +1,5 @@
 <?php
+
     if ( !defined('K_COUCH_DIR') ) die(); // cannot be loaded directly
 
     /**
@@ -16,8 +17,8 @@
     *
     *   Additionally edit this file to skip existing directories from loading by tweaking "$exclude" array. Be precise!
     *
-    *   @category CouchCMS Mods and Tweaks
-    *   @link
+    *   You should have downloaded this code from:
+    *   @link https://github.com/trendoman/Tweakus-Dilectus
     *   @author Anton S aka trendoman <tony.smirnov@gmail.com>
     *   @date   01.03.2020
     *   @last   25.05.2022
@@ -44,8 +45,16 @@
     }
 
 
-    /** Place the following into kfunctions.php -
-     *
-     *  require_once( K_COUCH_DIR.'addons/anton.cms@ya.ru__admin-panel-tweaks/__autoload.php' );
-     *
-    **/
+    /*
+    // ~~~~~~~~~~~~~
+    // Credits
+    // ~~~~~~~~~~~~~
+    // You should have downloaded this code from https://github.com/trendoman
+    // ~~~~~~~~~~~~~
+    // Support
+    // ~~~~~~~~~~~~~
+    // Ask any question via forum or email <anton.cms@ya.ru>, <tony.smirnov@gmail.com> "Anton S aka Trendoman"
+    // My CouchCMS forum posts: https://www.couchcms.com/forum/search.php?author_id=18478&sr=posts
+    // New Telegram channel: https://t.me/couchcms
+    */
+

@@ -4,8 +4,6 @@
     *   Hide certain templates
     *   See through code to uncomment line which excludes superadmin.
     *
-    *   @category Backend Mods
-    *   @link
     *   @author Kamran Kashif aka KK <kksidd@couchcms.com>
     *   @author Anton Smirnov aka Trendoman <tony.smirnov@gmail.com>
     *   @date   11.06.2019
@@ -37,3 +35,17 @@
             }
         }
     }
+
+    /*
+    // ~~~~~~~~~~~~~
+    // Credits
+    // ~~~~~~~~~~~~~
+    // You should have downloaded this code from https://github.com/trendoman
+    // @author Anton S aka Trendoman <tony.smirnov@gmail.com>
+    // ~~~~~~~~~~~~~
+    // Support
+    // ~~~~~~~~~~~~~
+    // Ask any question via forum or email <anton.cms@ya.ru>, <tony.smirnov@gmail.com> "Anton S aka Trendoman"
+    // My CouchCMS forum posts: https://www.couchcms.com/forum/search.php?author_id=18478&sr=posts
+    // New Telegram channel: https://t.me/couchcms
+    */

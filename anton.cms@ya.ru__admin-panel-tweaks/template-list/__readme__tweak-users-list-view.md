@@ -11,17 +11,9 @@ So now, the accounts are neatly segregated in two places -
 2. All lower level accounts (usually created from front-end) are in the extended users template.
 
 
-```txt
-@category Backend Mods
-@link   https://www.couchcms.com/forum/viewtopic.php?f=4&t=11057&start=10#p28616
-@author Kamran Kashif aka KK <kksidd@couchcms.com>
-@author Anton S aka Trendoman <tony.smirnov@gmail.com>
-@date   26.05.2022
-```
-
 ## Equalize form-views
 
-> Coming to the second issue (different field layouts), we can normalize that by using `<cms:config_form_view>` in you **extended** template.
+> Coming to the second issue (different field layouts), we can normalize that by using `<cms:config_form_view>` in your **extended** template.
 
 ```html
 <!--
@@ -65,12 +57,25 @@ So now, the accounts are neatly segregated in two places -
 ```
 
 
+## Support
 
+Donations are desperately welcomed to keep up with support requests; to continue receiving your [thankyou's](https://github.com/trendoman/Dignotas) &mdash;
 
-## Credits
+**Bitcoin**: bc1qsl2tulmsjcvpkegepeunmumz599yz0lhuktdjt
 
-Send me your thoughts to <tony.smirnov@gmail.com> &mdash; Anton S aka Trendoman
+Ask any question via forum or email &mdash; <anton.cms@ya.ru>, <tony.smirnov@gmail.com> &mdash; Anton S aka Trendoman<br>
+You'll get *a good meaningful* reply within hours.
 
 My CouchCMS forum posts: https://www.couchcms.com/forum/search.php?author_id=18478&sr=posts
 
-Telegram channel: https://t.me/couchcms
+New Telegram channel: https://t.me/couchcms
+
+---
+
+
+```txt
+@link   https://www.couchcms.com/forum/viewtopic.php?f=4&t=11057&start=10#p28616
+@author Kamran Kashif aka KK <kksidd@couchcms.com>
+@author Anton S aka Trendoman <tony.smirnov@gmail.com>
+@date   26.05.2022
+```

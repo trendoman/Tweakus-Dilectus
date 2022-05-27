@@ -4,8 +4,6 @@
     /**
     *   Adds <br> after alert's label to keep display of validation errors each on separate line and not messy.
     *
-    *   @category 
-    *   @link
     *   @author "Anton aka Trendoman" <tony.smirnov@gmail.com>
     *   @date   14.06.2020
     */
@@ -16,13 +14,14 @@
         ob_start();
 ?>
 
-        /*  
+        /*
         *   "ALIGNED ALERT"
-		*	Adds <br> after alert's label to keep validation errors each on separate line and not messy.
+        *	Adds <br> after alert's label to keep validation errors each on separate line and not messy.
         *
         *   This code comes from "couch/addons/anton.cms@ya.ru__admin-panel-tweaks/alert-aligned"
         *
-		*   @link https://github.com/CouchCMS/CouchCMS/pull/115
+        *   @link https://github.com/trendoman/Tweakus-Dilectus
+        *   @link https://github.com/CouchCMS/CouchCMS/pull/115
         *   @author: Antony <tony.smirnov@gmail.com>
         *   @date: 06.06.2020
         */
@@ -37,3 +36,17 @@
 
         $FUNCS->add_js( $js );
     });
+
+    /*
+    // ~~~~~~~~~~~~~
+    // Credits
+    // ~~~~~~~~~~~~~
+    // You should have downloaded this code from https://github.com/trendoman
+    // @author Anton S aka Trendoman <tony.smirnov@gmail.com>
+    // ~~~~~~~~~~~~~
+    // Support
+    // ~~~~~~~~~~~~~
+    // Ask any question via forum or email <anton.cms@ya.ru>, <tony.smirnov@gmail.com> "Anton S aka Trendoman"
+    // My CouchCMS forum posts: https://www.couchcms.com/forum/search.php?author_id=18478&sr=posts
+    // New Telegram channel: https://t.me/couchcms
+    */

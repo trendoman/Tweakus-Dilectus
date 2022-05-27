@@ -1,12 +1,12 @@
 <?php
 
-    /**
-    *   List-view: Increase page's titles visible length before ellipsis (...) kicks in.
+   /**
+    *  List-view: Increase page's titles visible length before ellipsis (...) kicks in.
     *
-    *   @category Backend Mods
-    *   @link   https://www.couchcms.com/forum/viewtopic.php?f=2&t=10250#p24782
-    *   @author Kamran Kashif aka KK <kksidd@couchcms.com>
-    *   @date   11.06.2019
+    *  @link   https://www.couchcms.com/forum/viewtopic.php?f=2&t=10250#p24782
+    *  @author Kamran Kashif aka KK <kksidd@couchcms.com>
+    *  @date   11.06.2019
+    *
     */
 
     $FUNCS->add_event_listener( 'alter_pages_list_default_fields', 'my_admin_page_title_length_set' );
@@ -24,3 +24,16 @@
             }
         }
     }
+
+    /*
+    // ~~~~~~~~~~~~~
+    // Credits
+    // ~~~~~~~~~~~~~
+    // You should have downloaded this code from https://github.com/trendoman
+    // ~~~~~~~~~~~~~
+    // Support
+    // ~~~~~~~~~~~~~
+    // Ask any question via forum or email <anton.cms@ya.ru>, <tony.smirnov@gmail.com> "Anton S aka Trendoman"
+    // My CouchCMS forum posts: https://www.couchcms.com/forum/search.php?author_id=18478&sr=posts
+    // New Telegram channel: https://t.me/couchcms
+    */

@@ -4,8 +4,6 @@
     *   The very first cloned page created automatically now has a shorter default title - "Default page" - and gets auto-un-published.
     *   It is a significant time saver and helps avoid renaming page'd default title - 'Default page for xxx.php  * PLEASE CHANGE THIS TITLE * '.
     *
-    *   @category Backend Mods
-    *   @link
     *   @author @trendoman <tony.smirnov@gmail.com>
     *   @author Kamran Kashif aka KK <kksidd@couchcms.com>
     *   @date   11.06.2019
@@ -35,3 +33,17 @@
             }
         }
     }
+
+
+    /*
+    // ~~~~~~~~~~~~~
+    // Credits
+    // ~~~~~~~~~~~~~
+    // You should have downloaded this code from https://github.com/trendoman
+    // ~~~~~~~~~~~~~
+    // Support
+    // ~~~~~~~~~~~~~
+    // Ask any question via forum or email <anton.cms@ya.ru>, <tony.smirnov@gmail.com> "Anton S aka Trendoman"
+    // My CouchCMS forum posts: https://www.couchcms.com/forum/search.php?author_id=18478&sr=posts
+    // New Telegram channel: https://t.me/couchcms
+    */

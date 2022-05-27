@@ -4,18 +4,28 @@
 
 Can also hide system sections, like USERS.
 
+Read more here &ndash; https://www.couchcms.com/forum/viewtopic.php?f=8&t=9887
+
+Set the sidebar item to be hidden directly in code: `hide-items.php`.
+
+## Support
+
+Donations are desperately welcomed to keep up with support requests; to continue receiving your [thankyou's](https://github.com/trendoman/Dignotas) &mdash;
+
+**Bitcoin**: bc1qsl2tulmsjcvpkegepeunmumz599yz0lhuktdjt
+
+Ask any question via forum or email &mdash; <anton.cms@ya.ru>, <tony.smirnov@gmail.com> &mdash; Anton S aka Trendoman<br>
+You'll get *a good meaningful* reply within hours.
+
+My CouchCMS forum posts: https://www.couchcms.com/forum/search.php?author_id=18478&sr=posts
+
+New Telegram channel: https://t.me/couchcms
+
+---
+
 ```txt
-@category Backend Mods
 @link   https://www.couchcms.com/forum/viewtopic.php?f=8&t=9887
 @author Kamran Kashif aka KK <kksidd@couchcms.com>
 @author Anton S aka Trendoman <tony.smirnov@gmail.com>
 @date   11.06.2019
 ```
-
-## Credits
-
-Send me your thoughts to <tony.smirnov@gmail.com> &mdash; Anton S aka Trendoman
-
-My CouchCMS forum posts: https://www.couchcms.com/forum/search.php?author_id=18478&sr=posts
-
-Telegram channel: https://t.me/couchcms
