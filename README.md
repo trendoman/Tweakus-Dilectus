@@ -2,10 +2,13 @@
 
 Powerful tweaks and addons for CouchCMS.
 
-1. Admin Panel Tweaks &ndash; [readme](anton.cms%40ya.ru__admin-panel-tweaks/README.md)
-1. Modded Existing Tags &ndash; [readme](anton.cms%40ya.ru__tags-modded/README.md)
-1. Additional Tags &ndash; [readme](anton.cms%40ya.ru__tags-new/README.md)
-1. Additional Variables &ndash; [readme](anton.cms%40ya.ru__variables-new/README.md)
+* Admin-Panel tweaks &ndash; [readme](anton.cms%40ya.ru__admin-panel-tweaks/README.md)
+* Aliases for tags &ndash; [readme](anton.cms%40ya.ru__tags-aliased/README.md)
+* Modded stock tags &ndash; [readme](anton.cms%40ya.ru__tags-modded/README.md)
+* Additional new tags &ndash; [readme](anton.cms%40ya.ru__tags-new/README.md)
+* Additional new variables &ndash; [readme](anton.cms%40ya.ru__variables-new/README.md)
+
+**NOTE:** This is a work in progress regarding publishing more addons and tweaks. More and more are coming every week. Watch it!
 
 ## Installation
 
@@ -24,12 +27,12 @@ Powerful tweaks and addons for CouchCMS.
 4. Include lines of your choice to `couch/addons/kfunctions.php` file &mdash;
   ```php
   require_once( K_COUCH_DIR.'addons/anton.cms@ya.ru__admin-panel-tweaks/__autoload.php' );
+  require_once( K_COUCH_DIR.'addons/anton.cms@ya.ru__tags-aliased/aliased-tags.php' );
   require_once( K_COUCH_DIR.'addons/anton.cms@ya.ru__tags-modded/__autoload.php' );
   require_once( K_COUCH_DIR.'addons/anton.cms@ya.ru__tags-new/__autoload.php' );
   require_once( K_COUCH_DIR.'addons/anton.cms@ya.ru__variables-new/__autoload.php' );
   ```
-
-**NOTE:** This is a work in progress regarding publishing more addons and tweaks. Takes time to cleanup some random stuff, so to speak. Bear with it, won't take long! &mdash; May 2022
+  Advice: Check out **Extended KFunctions** [repository](https://github.com/trendoman/Extended-KFunctions) &ndash; it has everything packed neatly.
 
 
 ## Support
