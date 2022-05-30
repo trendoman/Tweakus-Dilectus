@@ -1,7 +1,7 @@
 <?php
 
     /**
-    *   <cms:show_json myvar as_html='1' no_escape='1' no_validate='1' />
+    *   <cms:show_json myvar as_html='1' no_escape='1' no_validate='1' spaces='4' />
     *   Shortcut to <cms:show myvar as_json='1' /> with option to prettify output
     *
     *   JSON Format thanks to Dave Perrett @ https://www.daveperrett.com/articles/2008/03/11/format-json-with-php/
@@ -16,16 +16,15 @@
         global $FUNCS, $TAGS;
         if( count($node->children) ) {die("ERROR: Tag \"".$node->name."\" is a self closing tag");}
 
-        /* tag cms:show handles scope and arrays;
-         * returned payload is either json or a non-encoded text */
+        /* tag cms:show handles scope */
         $value = $TAGS->show( $params, $node );
 
         extract( $FUNCS->get_named_vars(
                     array(
                           'as_html'=>'0',     /* show json as HTML-markup for best browser-view */
                           'no_escape'=>'0',   /* strip slashes for best readability (ATTN! JSON WILL BE INVALID for copy-paste) */
-                          'no_validate'=>'0',  /* CAUTION: if json is 100% valid, this reduces time for performance */
-                          'spaces'=>'2'       /* indent with 2 or more spaces */
+                          'no_validate'=>'0', /* CAUTION: if json is 100% valid, this reduces time for performance */
+                          'spaces'=>'3'       /* indent with 0 or more spaces */
                         ),
                     $params)
                );
@@ -34,6 +33,7 @@
         $no_validate = ( $no_validate==1 ) ? 1 : 0;
         $spaces = intval($spaces);
 
+        if( is_array($value) ){ $value = $FUNCS->json_encode( $value ); }
         /* validate to make sure of JSON in hands */
         if( !$no_validate && !is_array(json_decode($value, true)) ){
 
@@ -46,8 +46,8 @@
         $result       = '';
         $pos          = 0;
         $strLen       = strlen($json);
-        $indentStr    = ( $as_html ) ? str_repeat('&nbsp;',$spaces) : str_repeat(' ',$spaces);
-        $newLine      = ( $as_html ) ? "<br>"  : "\r\n";
+        $indentStr    = ( $as_html==1 ) ? str_repeat("&nbsp;",$spaces) : str_repeat(" ",$spaces);
+        $newLine      = ( $as_html==1 ) ? "<br>"  : (($spaces==0) ? "" : "\r\n");
         $prevChar     = '';
         $prevPrevChar = '';
         $outOfQuotes  = true;
@@ -101,6 +101,7 @@
 
         return $result;
     }
+
     /*
     // ~~~~~~~~~~~~~
     // Credits
