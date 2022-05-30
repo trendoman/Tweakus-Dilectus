@@ -1,10 +1,10 @@
 ## Default page tweak
 
 The very first cloned page normally has a very long title &mdash;
-> `Default page for your-template.php *PLEASE CHANGE THIS TITLE*`
+> `Default page for index.php *PLEASE CHANGE THIS TITLE*`
 
 This tweak keeps the title short, simply
-> `Default page`
+> `Default page for index.php`
 
 Additionally, page is auto-unpublished.
 

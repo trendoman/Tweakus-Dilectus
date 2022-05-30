@@ -29,9 +29,11 @@
         // __DIR__.DIRECTORY_SEPARATOR.'vendor',
     ));
 
-    $iterator = new RecursiveDirectoryIterator( __DIR__, FilesystemIterator::SKIP_DOTS );
+    $directory = new RecursiveDirectoryIterator( __DIR__, FilesystemIterator::SKIP_DOTS );
+    $iterator = new RecursiveIteratorIterator( $directory );
     foreach ($iterator as $file) {
         $pathname = $file->getPathname();
+        //error_log('Testing pathname - '.$pathname);
         if( strpos($pathname, '~') !== false ) continue;
         if( false === $file->isFile() ) continue;
         if( false === $file->isReadable() ) continue;

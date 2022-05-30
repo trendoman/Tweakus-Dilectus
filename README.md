@@ -1,6 +1,7 @@
 # [Tweakus Dilectus](https://github.com/trendoman/Tweakus-Dilectus)
 
 Powerful tweaks and addons for CouchCMS.
+> First time? Visit [CouchCMS website](couchcms.com/) to enjoy this TIME-TESTED AND SECURE CMS. It's perfect for designers and is open source! See its [GitHub Repo](https://github.com/CouchCMS/CouchCMS).
 
 * Admin-Panel tweaks &ndash; [readme](anton.cms%40ya.ru__admin-panel-tweaks/README.md)
 * Aliases for tags &ndash; [readme](anton.cms%40ya.ru__tags-aliased/README.md)
