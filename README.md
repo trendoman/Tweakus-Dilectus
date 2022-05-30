@@ -13,10 +13,12 @@ Powerful tweaks and addons for CouchCMS.
 ## Installation
 
 1. Clone repo to website's root
+    - or download zip &ndash; [main.zip](https://github.com/trendoman/Tweakus-Dilectus/archive/refs/heads/main.zip)
+
   ```bash
   git clone https://github.com/trendoman/Tweakus-Dilectus
   ```
-2. Copy files to a directory with CouchCMS Addons
+2. Copy folders to a directory with CouchCMS Addons
   ```bash
   cp -r Tweakus-Dilectus/* couch/addons
   ```
