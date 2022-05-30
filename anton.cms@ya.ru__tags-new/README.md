@@ -1,7 +1,6 @@
 # [Additional Tags](https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms%40ya.ru__tags-new)
 
 #### This is a collection of absolutely new Tags for CouchCMS
-> First time? Visit [CouchCMS website](couchcms.com/) to enjoy this TIME-TESTED AND SECURE CMS. It's perfect for designers and is open source! See its [GitHub Repo](https://github.com/CouchCMS/CouchCMS).
 
 Look for a dedicated *`__readme__`* files for each new tag to learn more about it. And/or check the code.
 

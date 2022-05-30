@@ -1,7 +1,7 @@
 # [Admin Panel Tweaks](https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms%40ya.ru__admin-panel-tweaks)
 
 #### This is a collection of various addons and codes for CouchCMS.<br>
-> First time? Visit [CouchCMS website](couchcms.com/) to enjoy this TIME-TESTED AND SECURE CMS. It's perfect for designers and is open source! See its [GitHub Repo](https://github.com/CouchCMS/CouchCMS).
+> First time? Visit CouchCMS [website](https://www.couchcms.com/) to enjoy this TIME-TESTED AND SECURE CMS. It's perfect for designers and is open source! See its [GitHub Repo](https://github.com/CouchCMS/CouchCMS).
 
 Look for a dedicated *`__readme__`* files in subfolders to learn more about each tweak. And/or check the code.
 

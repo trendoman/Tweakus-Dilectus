@@ -1,7 +1,6 @@
 # [Modded Existing Tags](https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms%40ya.ru__tags-modded)
 
 #### This is a collection of mods for CouchCMS Tags.
-> First time? Visit [CouchCMS website](couchcms.com/) to enjoy this TIME-TESTED AND SECURE CMS. It's perfect for designers and is open source! See its [GitHub Repo](https://github.com/CouchCMS/CouchCMS).
 
 Look for a dedicated *`__readme__`* files for each modded tag to learn more about each tweak. And/or check the code.
 
