@@ -13,6 +13,8 @@ Thanks to `__autoload.php`, every `.php` file is preloaded when CouchCMS boots.
 - new `<cms:base64_encode>` &ndash; [readme](__readme__base64_encode.md)
 - new `<cms:if_empty>` &ndash; [readme](__readme__if_empty.md)
 - new `<cms:md5>` &ndash; [readme](__readme__md5.md)
+- new `<cms:show_json>` &ndash; [readme](__readme__show_json.md)
+- new `<cms:write>` &ndash; [readme](__readme__write.md)
 
 ## Installation
 
