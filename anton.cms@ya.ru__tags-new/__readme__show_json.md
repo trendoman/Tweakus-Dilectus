@@ -22,7 +22,7 @@ Also `show_json` can prettify JSON output with configurable indentation.
 
 ## Usage
 
-If `show` tag expected only array, `show_json` takes both &mdash; array or JSON-string as its first parameter. That is to showcase its prominent feature &mdash; prettify JSON output.
+If **show** tag expected only array, **show_json** takes both &mdash; array or JSON-string as its first parameter. That is to showcase its prominent feature &mdash; prettify JSON output.
 
 Let's create an array and see tag in action &mdash;
 ```html
@@ -54,7 +54,23 @@ If you do not want to wrap tag in `<pre>` as I did above, then use parameter **a
 
 #### no_escape
 
-Often JSON contains \\escaped \\characters. Set parameter **no_escape** to *1* (default is *0*) to improve readability as it will strip values from extra forward slashes. Keep in mind that JSON will cease to be valid for copy-paste without proper escaping.
+Often JSON contains \\escaped \\characters. Set parameter **no_escape** to *1* (default is *0*) to improve readability as it will strip values from extra forward slashes.
+
+Without parameter &ndash; same as **no_escape** *= '0'*
+```json
+{
+   "k_paginate_link_cur":"http:\/\/my.couch\/worker.php",
+   "k_paginate_link_next":"http:\/\/my.couch\/worker.php?pg=2",
+}
+```
+**no_escape** *= '1'*
+```json
+{
+   "k_paginate_link_cur":"http://my.couch/worker.php",
+   "k_paginate_link_next":"http://my.couch/worker.php?pg=2",
+}
+```
+**CAUTION:** While JSON standard does not require escaping of forward slashes, some parsers may bulk on it. So it is safer to keep slashes escaped.
 
 #### no_validate
 
