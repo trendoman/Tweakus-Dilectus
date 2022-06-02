@@ -1,10 +1,14 @@
 # New tag: `<cms:show_json>`
 
-Kinda shortcut to &mdash;
+Tag **show_json** prints JSON variables in a pretty readable way.
+```html
+<cms:show_json myvar />
+```
+It reminds of tag **show** and indeed is kinda shortcut to &mdash;
 ```html
 <cms:show myvar as_json='1' />
 ```
-Also `show_json` can prettify JSON output with configurable indentation.
+It's striking difference though is ability of **show_json** to prettify JSON output with configurable indentation.
 
 ## Example
 ```html
@@ -13,24 +17,24 @@ Also `show_json` can prettify JSON output with configurable indentation.
    >
    <cms:show_json myvar
       as_html='1'
-      no_escape=''
-      no_validate=''
-      spaces='4'
+      no_escape='1'
+      no_validate='0'
+      spaces='3'
       />
 </cms:test>
 ```
 
 ## Usage
 
-If **show** tag expected only array, **show_json** takes both &mdash; array or JSON-string as its first parameter. That is to showcase its prominent feature &mdash; prettify JSON output.
+If common **show** tag expected only array, **show_json** takes both &mdash; array or JSON-string as its first parameter. That is to showcase its prominent feature &mdash; prettify JSON output.
 
-Let's create an array and see tag in action &mdash;
+Let's create an array and see our tag in action &mdash;
 ```html
 <cms:set climate = '{"Russia":{"Moscow":"cold","Sochi":"warm"}}' is_json='1' />
 <cms:test
    ignore='0'>
 
-   <pre><cms:show_json climate /></pre>
+   <pre><cms:show_json climate as_html='0'/></pre>
 
 </cms:test>
 ```
@@ -44,51 +48,62 @@ Output is automatically formatted to 3 (default) spaces &mdash;
    }
 }
 ```
+## Parameters
 
-#### as_html
+* as_html
+* no_escape
+* no_validate
+* spaces
+* monospace
 
-If you do not want to wrap tag in `<pre>` as I did above, then use parameter **as_html**, which can be either *0* (default) or *1*, and see spaces converted to `&nbsp;` &mdash;
+### as_html
+
+If you do not want to wrap tag in `<pre>` as I did above, then make sure parameter **as_html** is either set to *1* (default) or omitted to invoke its default value. The spaces will be converted to `&nbsp;` &mdash;
 ```html
 <cms:show_json climate as_html='1' />
 ```
 
-#### no_escape
+### no_escape
 
-Often JSON contains \\escaped \\characters. Set parameter **no_escape** to *1* (default is *0*) to improve readability as it will strip values from extra forward slashes.
+Often JSON contains \\escaped \\characters. Parameter **no_escape** (default is *1*) improves readability as it will strip extra forward slashes from the values.
 
-Without parameter &ndash; same as **no_escape** *= '0'*
+**no_escape** *= '0'*
 ```json
 {
    "k_paginate_link_cur":"http:\/\/my.couch\/worker.php",
-   "k_paginate_link_next":"http:\/\/my.couch\/worker.php?pg=2",
+   "k_paginate_link_next":"http:\/\/my.couch\/worker.php?pg=2"
 }
 ```
-**no_escape** *= '1'*
+Without parameter &ndash; same as **no_escape** *= '1'* (default) &mdash;
 ```json
 {
    "k_paginate_link_cur":"http://my.couch/worker.php",
-   "k_paginate_link_next":"http://my.couch/worker.php?pg=2",
+   "k_paginate_link_next":"http://my.couch/worker.php?pg=2"
 }
 ```
-**CAUTION:** While JSON standard does not require escaping of forward slashes, some parsers may bulk on it. So it is safer to keep slashes escaped.
+**CAUTION:** While JSON standard does not require escaping of forward slashes, some parsers may bulk on it.
 
-#### no_validate
+### no_validate
 
 Finally, **no_validate** set to *1* (default is *0*) instructs the tag to skip validating of input JSON-string if you are 100% sure it is correct (*are you?!*). This setting will slightly improve performance in case of very large JSONs or in repeated operations.<br>
-**ATTN:** If the first parameter is a JSON-string which indeed is malformed (invalid JSON) *AND* **no_validate** is set to *1*, then there will be no error but the output will lose its beauty. Without this parameter (or set to *0*), the validation kicks in and there will be no output at all.
+**ATTN:** If the first parameter is a JSON-string which indeed is malformed (invalid JSON) *AND* **no_validate** is set to *1*, then there will be no error but the output will lose its beauty. Without this parameter (or set to *0*), the validation kicks in and there will be no output at all of malformed JSON.
 
-#### spaces
+### spaces
 
 You are free to choose any number of spaces that pleases your eyes. Default is *3*, because *I* like it.
 
-One last note. If you happen to use `show_json` and wish to see the output identical to those of tag `show`, here is how it's done:
+One last note. If you happen to use **show_json** and wish to see the output identical to those of tag **show**, here is how it's done:
 ```html
 <cms:show climate as_json='1' />
 ```
 equals to &ndash;
 ```html
-<cms:show_json climate spaces='0' />
+<cms:show_json climate as_html='0' no_escape='0' spaces='0' />
 ```
+
+### monospace
+
+Wraps output in `<pre>..</pre>` HTML tags. Default is *1*.
 
 ## Support
 
@@ -108,5 +123,5 @@ New Telegram channel: https://t.me/couchcms
 ```txt
 @author @trendoman <tony.smirnov@gmail.com>
 @date   13.06.2019
-@last   30.05.2022
+@last   01.06.2022
 ```

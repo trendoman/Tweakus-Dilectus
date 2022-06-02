@@ -1,7 +1,7 @@
 <?php
 
     /**
-    *   <cms:show_json myvar as_html='1' no_escape='1' no_validate='1' spaces='4' />
+    *   <cms:show_json myvar as_html='1' no_escape='1' no_validate='0' spaces='3' monospace='1' />
     *   Shortcut to <cms:show myvar as_json='1' /> with option to prettify output
     *
     *   JSON Format thanks to Dave Perrett @ https://www.daveperrett.com/articles/2008/03/11/format-json-with-php/
@@ -21,17 +21,19 @@
 
         extract( $FUNCS->get_named_vars(
                     array(
-                          'as_html'=>'0',     /* show json as HTML-markup for best browser-view */
-                          'no_escape'=>'0',   /* strip slashes for best readability (ATTN! JSON WILL BE INVALID for copy-paste) */
-                          'no_validate'=>'0', /* CAUTION: if json is 100% valid, this reduces time for performance */
-                          'spaces'=>'3'       /* indent with 0 or more spaces */
+                          'as_html'=>'1',     /* show json as HTML-markup for best browser-view */
+                          'no_escape'=>'1',   /* strip slashes for best readability (ATTN! Some parsers do not like this valid JSON) */
+                          'no_validate'=>'0', /* CAUTION: if a very big json is known to be 100% valid, this option reduces time for performance */
+                          'spaces'=>'3',      /* indent with 0 or more spaces */
+                          'monospace'=>'1'    /* wrap in <pre> */
                         ),
                     $params)
                );
-        $as_html = ( $as_html==1 ) ? 1 : 0;
-        $no_escape = ( $no_escape==1 ) ? 1 : 0;
+        $as_html = ( $as_html==0 ) ? 0 : 1;
+        $no_escape = ( $no_escape==0 ) ? 0 : 1;
         $no_validate = ( $no_validate==1 ) ? 1 : 0;
         $spaces = intval($spaces);
+        $monospace = ( $monospace==0 ) ? 0 : 1;
 
         if( is_array($value) ){ $value = $FUNCS->json_encode( $value ); }
         /* validate to make sure of JSON in hands */
@@ -98,6 +100,8 @@
             $prevPrevChar = $prevChar;
             $prevChar     = $char;
         }
+
+        if( $monospace ) $result = "<pre>".$result."</pre>";
 
         return $result;
     }
