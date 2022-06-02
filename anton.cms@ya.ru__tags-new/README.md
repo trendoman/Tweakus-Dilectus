@@ -20,10 +20,12 @@ Thanks to `__autoload.php`, every `.php` file is preloaded when CouchCMS boots.
 1. Place current folder into &ndash; `couch/addons`
 2. Put this line to &ndash; `couch/addons/kfunctions.php`
     ```php
-    require_once( K_COUCH_DIR.'addons/anton.cms@ya.ru__admin-panel-tweaks/__autoload.php' );
+    require_once( K_COUCH_DIR.'addons/anton.cms@ya.ru__tags-new/__autoload.php' );
     ```
     Advice: Check out **Extended KFunctions** [repository](https://github.com/trendoman/Extended-KFunctions) &ndash; it has everything packed neatly.
 3. Make sure the folder/file name <span style="color:coral">does not contain `~` symbol</span> in path. Otherwise, tweak will not be active.
+
+Or, you may just copy-paste tag's code into `couch/addons/kfunctions.php` file and be done. However you will lose a way to update tags comfortably.
 
 ## How autoload works?
 
