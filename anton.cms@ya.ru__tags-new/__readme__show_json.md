@@ -34,7 +34,7 @@ Let's create an array and see our tag in action &mdash;
 <cms:test
    ignore='0'>
 
-   <pre><cms:show_json climate as_html='0'/></pre>
+   <cms:show_json climate />
 
 </cms:test>
 ```
@@ -58,7 +58,11 @@ Output is automatically formatted to 3 (default) spaces &mdash;
 
 ### as_html
 
-If you do not want to wrap tag in `<pre>` as I did above, then make sure parameter **as_html** is either set to *1* (default) or omitted to invoke its default value. The spaces will be converted to `&nbsp;` &mdash;
+This parameter is usually omitted to invoke its default value (*1*). The spaces are converted to `&nbsp;` &mdash;
+```html
+<cms:show_json climate />
+```
+Equals to
 ```html
 <cms:show_json climate as_html='1' />
 ```
@@ -103,7 +107,8 @@ equals to &ndash;
 
 ### monospace
 
-Wraps output in `<pre>..</pre>` HTML tags. Default is *1*.
+Wraps output in `<pre>..</pre>` HTML tags. Default is *1*.<br>
+Depends on parameter **as_html**, which is when set to *0*, automatically sets **monospace** to *0* as well.
 
 ## Support
 

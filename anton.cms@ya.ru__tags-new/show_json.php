@@ -101,7 +101,7 @@
             $prevChar     = $char;
         }
 
-        if( $monospace ) $result = "<pre>".$result."</pre>";
+        if( $monospace && $as_html ) $result = "<pre>".$result."</pre>";
 
         return $result;
     }
