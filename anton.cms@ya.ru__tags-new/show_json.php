@@ -37,7 +37,7 @@
 
         if( is_array($value) ){ $value = $FUNCS->json_encode( $value ); }
         /* validate to make sure of JSON in hands */
-        if( !$no_validate && !is_array(json_decode($value, true)) ){
+        if( !$no_validate && !is_array($FUNCS->json_decode($value)) ){
 
           return; /* JSON malformed :( */
         }
