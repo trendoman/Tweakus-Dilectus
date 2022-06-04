@@ -1,10 +1,19 @@
 # New tag: `<cms:show_json>`
 
-Tag **show_json** prints JSON variables in a pretty readable way.
+Tag **show_json** prints JSON arrays or strings in a pretty readable way.
 ```html
 <cms:show_json myvar />
 ```
-It reminds of tag **show** and indeed is kinda shortcut to &mdash;
+```html
+<cms:show_json '{ "id" : "1" }' />
+```
+```txt
+{
+    "id" : "1"
+}
+```
+
+Its syntax reminds of tag **show** and indeed is kinda shortcut to &mdash;
 ```html
 <cms:show myvar as_json='1' />
 ```
@@ -20,6 +29,7 @@ It's striking difference though is ability of **show_json** to prettify JSON out
       no_escape='1'
       no_validate='0'
       spaces='3'
+      monospace='1'
       />
 </cms:test>
 ```
@@ -90,7 +100,16 @@ Without parameter &ndash; same as **no_escape** *= '1'* (default) &mdash;
 ### no_validate
 
 Finally, **no_validate** set to *1* (default is *0*) instructs the tag to skip validating of input JSON-string if you are 100% sure it is correct (*are you?!*). This setting will slightly improve performance in case of very large JSONs or in repeated operations.<br>
-**ATTN:** If the first parameter is a JSON-string which indeed is malformed (invalid JSON) *AND* **no_validate** is set to *1*, then there will be no error but the output will lose its beauty. Without this parameter (or set to *0*), the validation kicks in and there will be no output at all of malformed JSON.
+
+If the first parameter is a JSON-string which indeed is malformed (invalid JSON) *AND* **no_validate** is set to *1*, then there will be no error but the output will lose its beauty.
+
+**ATTN:** Without this parameter (or set to *0*), the validation kicks in and there will be no output at all of malformed JSON.
+
+Common usage would be passing an output of a function that is known to return valid JSON without validation &mdash;
+```html
+<cms:show_json "<cms:call 'get-users' access_level='10' />" no_validate='1' />
+```
+Absent parameter **no_validate** equals to *0*. In such case, the string will be validated. Invalid JSON will be blocked.
 
 ### spaces
 
