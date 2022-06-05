@@ -26,6 +26,7 @@ It's striking difference though is ability of **show_json** to prettify JSON out
    >
    <cms:show_json myvar
       as_html='1'
+      html_encode='1'
       no_escape='1'
       no_validate='0'
       spaces='3'
@@ -61,6 +62,7 @@ Output is automatically formatted to 3 (default) spaces &mdash;
 ## Parameters
 
 * as_html
+* html_encode
 * no_escape
 * no_validate
 * spaces
@@ -76,6 +78,10 @@ Equals to
 ```html
 <cms:show_json climate as_html='1' />
 ```
+
+### html_encode
+
+HTML content in JSON nodes will be encoded. Default is *1*. Browsers won't destroy layout if there is a tag somewhere.
 
 ### no_escape
 

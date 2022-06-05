@@ -22,6 +22,7 @@
         extract( $FUNCS->get_named_vars(
                     array(
                           'as_html'=>'1',     /* show json as HTML-markup for best browser-view */
+                          'html_encode'=>'1', /* HTML content in JSON nodes will be encoded, but pretty-markup will be not */
                           'no_escape'=>'1',   /* strip slashes for best readability (ATTN! Some parsers do not like this valid JSON) */
                           'no_validate'=>'0', /* CAUTION: if a very big json is known to be 100% valid, this option reduces time for performance */
                           'spaces'=>'3',      /* indent with 0 or more spaces */
@@ -30,6 +31,7 @@
                     $params)
                );
         $as_html = ( $as_html==0 ) ? 0 : 1;
+        $html_encode = ( $html_encode==0 ) ? 0 : 1;
         $no_escape = ( $no_escape==0 ) ? 0 : 1;
         $no_validate = ( $no_validate==1 ) ? 1 : 0;
         $spaces = intval($spaces);
@@ -41,9 +43,9 @@
 
           return; /* JSON malformed :( */
         }
-
         $json = $value;
         if( $no_escape ) $json = stripslashes($json);
+        if( $html_encode ) $json = htmlspecialchars( $json, ENT_QUOTES, K_CHARSET );
 
         $result       = '';
         $pos          = 0;
