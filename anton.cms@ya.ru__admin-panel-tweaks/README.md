@@ -1,11 +1,10 @@
 # [Admin Panel Tweaks](https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms%40ya.ru__admin-panel-tweaks)
 
-#### This is a collection of various addons and codes for CouchCMS.<br>
-> First time? Visit CouchCMS [website](https://www.couchcms.com/) to enjoy this TIME-TESTED AND SECURE CMS. It's perfect for designers and is open source! See its [GitHub Repo](https://github.com/CouchCMS/CouchCMS).
+#### This is a collection of various tweaks for CouchCMS.<br>
+> First time? Visit CouchCMS [website](http://couchcms.com/) to enjoy this TIME-TESTED AND SECURE CMS. It's perfect for designers and is open source! See its GitHub [repo](https://github.com/CouchCMS/CouchCMS).
 
-Look for a dedicated *`__readme__`* files in subfolders to learn more about each tweak. And/or check the code.
+Look for a dedicated *`__readme__`* files in subfolders to learn more about each tweak.
 
-Thanks to `__autoload.php`, every `.php` file from all subfolders is preloaded when CouchCMS boots.
 
 ## Contents
 
@@ -28,16 +27,23 @@ Thanks to `__autoload.php`, every `.php` file from all subfolders is preloaded w
     - tweak-list-limit-globally &mdash; [readme](template-list/__readme__tweak-list-limit-globally.md)
     - tweak-title-visible-length &mdash; [readme](template-list/__readme__tweak-title-visible-length.md)
     - tweak-users-list-view &mdash; [readme](template-list/__readme__tweak-users-list-view.md)
+- suave-links &mdash; [readme](suave-links/README.md) &mdash; Click without page reload in Admin-panel.
 
 ## Installation
 
-1. Place current folder into &ndash; `couch/addons`
-2. Put this line to &ndash; `couch/addons/kfunctions.php`
+
+
+1. Place current folder into Addons folder in Couch installation, usually it is  `couch/addons`
+2. Register the autoload file &mdash; put following line to `couch/addons/kfunctions.php`
     ```php
     require_once( K_COUCH_DIR.'addons/anton.cms@ya.ru__admin-panel-tweaks/__autoload.php' );
     ```
     Advice: Check out **Extended KFunctions** [repository](https://github.com/trendoman/Extended-KFunctions) &ndash; it has everything packed neatly.
-3. Make sure the folder/file name <span style="color:coral">does not contain `~` symbol</span> in path. Otherwise, tweak will not be active.
+3. Make sure the desired tweak's folder/file name __does not contain__ `~` symbol in __path__. Otherwise, tweak will not be active (this helps disable-enable tweaks).
+
+
+Thanks to `__autoload.php`, every `.php` file from all subfolders is preloaded automatically when CouchCMS boots.
+
 
 ## How autoload works?
 
@@ -59,15 +65,29 @@ Autoload works like this:
     - can rename a file or folder (by adding a symbol `"~"`)  to skip from loading. As in &mdash; `mycode.php` &rArr; `~mycode.php`
     - rename a `.php` file to another valid extenstion `.php5` and it will also be skipped.
 
+
 ## Support
 
-Donations are desperately welcomed to keep up with support requests; to continue receiving your [thankyou's](https://github.com/trendoman/Dignotas) &mdash;
+
+Donate to have more addons!
+
+### email
+
+Support requests: tony.smirnov@gmail.com<br>
+You'll get a *well-informed up-to-date* reply.
+
+
+### donation
 
 **Bitcoin**: bc1qsl2tulmsjcvpkegepeunmumz599yz0lhuktdjt
 
-Ask any question via forum or email &mdash; <anton.cms@ya.ru>, <tony.smirnov@gmail.com> &mdash; Anton S aka Trendoman<br>
-You'll get *a good meaningful* reply.
+Desperately waiting for your help that enables
+- keep up with support requests;
+- continue receiving your [thank you's](https://github.com/trendoman/Dignotas)
+- write new code and improve existing
 
-My CouchCMS forum posts: https://www.couchcms.com/forum/search.php?author_id=18478&sr=posts
+### forum
 
-New Telegram channel: https://t.me/couchcms
+Browse helpful Tips&Tricks subforum: https://www.couchcms.com/forum/viewforum.php?f=8
+
+**Telegram**: https://t.me/couchcms
