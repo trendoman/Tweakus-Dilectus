@@ -7,6 +7,8 @@ Works out of the box with jQuery.ajax and clever tricks to reload Couch scripts.
 
 ## Example
 
+Click `►` to play the gif:
+
 ![NoReload.gif](img/NoReload.gif)
 
 
