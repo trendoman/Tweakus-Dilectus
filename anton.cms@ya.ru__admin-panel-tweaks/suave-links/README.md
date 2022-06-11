@@ -9,28 +9,11 @@ Works out of the box with jQuery.ajax and clever tricks to reload Couch scripts.
 
 ![NoReload.gif](img/NoReload.gif)
 
+
+## Installation
+
+Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
+
 ## Support
 
-
-Donate to have more addons!
-
-### email
-
-Support requests: tony.smirnov@gmail.com<br>
-You'll get a *well-informed up-to-date* reply.
-
-
-### donation
-
-**Bitcoin**: bc1qsl2tulmsjcvpkegepeunmumz599yz0lhuktdjt
-
-Desperately waiting for your help that enables
-- keep up with support requests;
-- continue receiving your [thank you's](https://github.com/trendoman/Dignotas)
-- write new code and improve existing
-
-### forum
-
-Browse helpful Tips&Tricks subforum: https://www.couchcms.com/forum/viewforum.php?f=8
-
-**Telegram**: https://t.me/couchcms
+Check out my dedicated [**SUPPORT**](/SUPPORT.md) page.

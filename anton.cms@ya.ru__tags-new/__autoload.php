@@ -45,17 +45,16 @@
         require_once $pathname;
     }
 
-
     /*
     // ~~~~~~~~~~~~~
     // Credits
     // ~~~~~~~~~~~~~
-    // You should have downloaded this code from https://github.com/trendoman
+    // You should have downloaded this code from https://github.com/trendoman/Tweakus-Dilectus
     // ~~~~~~~~~~~~~
     // Support
     // ~~~~~~~~~~~~~
-    // Ask any question via forum or email <anton.cms@ya.ru>, <tony.smirnov@gmail.com> "Anton S aka Trendoman"
-    // My CouchCMS forum posts: https://www.couchcms.com/forum/search.php?author_id=18478&sr=posts
-    // New Telegram channel: https://t.me/couchcms
+    // Write me at <anton.cms@ya.ru>, <tony.smirnov@gmail.com> "Anton S aka Trendoman"
+    // Telegram: https://t.me/couchcms
     */
+
 

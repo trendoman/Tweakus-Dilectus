@@ -1,52 +1,43 @@
 # [Tweakus Dilectus](https://github.com/trendoman/Tweakus-Dilectus)
 
-Powerful tweaks and addons for CouchCMS.
-> First time? Visit CouchCMS [website](https://www.couchcms.com/) to enjoy this TIME-TESTED AND SECURE CMS. It's perfect for designers and is open source! See its [GitHub Repo](https://github.com/CouchCMS/CouchCMS).
+#### Powerful tweaks and addons for CouchCMS.
+> First time? Visit CouchCMS [website](https://www.couchcms.com/) to enjoy this TIME-TESTED AND SECURE CMS.<br>
+> It's perfect for designers and is open source! See its GitHub [repo](https://github.com/CouchCMS/CouchCMS).
 
-* Admin-Panel tweaks &ndash; [readme](anton.cms%40ya.ru__admin-panel-tweaks/README.md)
-* Aliases for tags &ndash; [readme](anton.cms%40ya.ru__tags-aliased/README.md)
-* Modded stock tags &ndash; [readme](anton.cms%40ya.ru__tags-modded/README.md)
-* Additional new tags &ndash; [readme](anton.cms%40ya.ru__tags-new/README.md)
-* Additional new variables &ndash; [readme](anton.cms%40ya.ru__variables-new/README.md)
+## Admin-panel tweaks
 
-**NOTE:** This is a work in progress regarding publishing more addons and tweaks. More and more are coming every week. Watch it!
+Customize sidebar, list-view, form-view. Tweak display of editable fields, auto-name pages. Enjoy smoother navigation and many more!
+
+See [README](anton.cms%40ya.ru__admin-panel-tweaks/) with contents.
+
+## Aliases for tags
+
+Tired of forgetting complex tag names? Use your favorite shortcuts with this addon.
+
+See [README](anton.cms%40ya.ru__tags-aliased/) with how-to.
+
+## Modded stock tags
+
+Some tags perform better after modding or have their abilities expanded further.
+
+See [README](anton.cms%40ya.ru__tags-modded/), call for [SUPPORT](/SUPPORT.md) if you have ideas for the next mod.
+
+## Additional new tags
+
+CouchCMS can't have it all, but we can!
+
+See [README](anton.cms%40ya.ru__tags-new/) for new tags.
+
+## New system variables
+
+Quite helpful in everyday coding, a variable that can replace several *cms:if* or *cms:set* lines.
+
+See [README](anton.cms%40ya.ru__variables-new/) for variables.
 
 ## Installation
 
-1. Clone repo to website's root
-    - or download zip &ndash; [main.zip](https://github.com/trendoman/Tweakus-Dilectus/archive/refs/heads/main.zip)
-
-  ```bash
-  git clone https://github.com/trendoman/Tweakus-Dilectus
-  ```
-2. Copy folders to a directory with CouchCMS Addons
-  ```bash
-  cp -r Tweakus-Dilectus/* couch/addons
-  ```
-3. Remove repo
-  ```bash
-  rm -rf Tweakus-Dilectus
-  ```
-4. Include lines of your choice to `couch/addons/kfunctions.php` file &mdash;
-  ```php
-  require_once( K_COUCH_DIR.'addons/anton.cms@ya.ru__admin-panel-tweaks/__autoload.php' );
-  require_once( K_COUCH_DIR.'addons/anton.cms@ya.ru__tags-aliased/aliased-tags.php' );
-  require_once( K_COUCH_DIR.'addons/anton.cms@ya.ru__tags-modded/__autoload.php' );
-  require_once( K_COUCH_DIR.'addons/anton.cms@ya.ru__tags-new/__autoload.php' );
-  require_once( K_COUCH_DIR.'addons/anton.cms@ya.ru__variables-new/__autoload.php' );
-  ```
-  Advice: Check out **Extended KFunctions** [repository](https://github.com/trendoman/Extended-KFunctions) &ndash; it has everything packed neatly.
-
+See dedicated [**INSTALL**](/INSTALL.md) page.
 
 ## Support
 
-Donations are desperately welcomed to keep up with support requests; to continue receiving your [thankyou's](https://github.com/trendoman/Dignotas) &mdash;
-
-**Bitcoin**: bc1qsl2tulmsjcvpkegepeunmumz599yz0lhuktdjt
-
-Ask any question via forum or email &mdash; <anton.cms@ya.ru>, <tony.smirnov@gmail.com> &mdash; Anton S aka Trendoman<br>
-You'll get *a good meaningful* reply within hours.
-
-My CouchCMS forum posts: https://www.couchcms.com/forum/search.php?author_id=18478&sr=posts
-
-New Telegram channel: https://t.me/couchcms
+Check out my dedicated [**SUPPORT**](/SUPPORT.md) page.
