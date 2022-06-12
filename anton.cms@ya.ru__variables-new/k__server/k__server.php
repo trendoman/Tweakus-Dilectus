@@ -1,18 +1,16 @@
 <?php
 
     /**
-    *   Really big limit - '1.000.000' - with "k_million" variable.
+    *   New variable to access $_SERVER
     *
     *   @author @trendoman <tony.smirnov@gmail.com>
-    *   @date   11.06.2019
-    *   @last   13.02.2020
+    *   @date   12.06.2022
     */
 
-    $FUNCS->add_event_listener( 'add_render_vars', 'my_context_k_unlimited_handler' );
-    function my_context_k_unlimited_handler(){
+    $FUNCS->add_event_listener( 'add_render_vars', function () {
         global $CTX;
-        $CTX->set('k_million', 1000000);
-    }
+        $CTX->set( 'k__server', $_SERVER, 'global' );
+    });
 
     /*
     // ~~~~~~~~~~~~~

@@ -14,7 +14,7 @@ You'll get a *well-informed up-to-date* reply.
 
 ## telegram
 
-I created and maintain Couch-related **telegram channel**: https://t.me/couchcms
+I created and maintain Couch-related **telegram channel**: https://t.me/s/couchcms
 
 Ask questions, post comments; read news; promote your work &ndash; it's all about CouchCMS.
 
