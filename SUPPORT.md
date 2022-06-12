@@ -31,6 +31,6 @@ Desperately need your help that allows to &ndash;
 
 ## ask in forum
 
-Many questions have been asnwered in CouchCMS [forum](https://www.couchcms.com/forum/).
+Many questions have been answered in CouchCMS [forum](https://www.couchcms.com/forum/).
 
 Additionally browse [Tips&Tricks](https://www.couchcms.com/forum/viewforum.php?f=8) sub forum for more addons.
