@@ -78,6 +78,8 @@ HTML
 Using the examples above, feed your curiosity and list all present tags.<br>
 At this moment, there is little usage of this variable, if any ☺.
 
+Maybe if you study some addon, like Cart or Extended Users/Folders/Comments addon, it may be beneficial to see all tags that it has to offer.
+
 Normally, we can check if a certain tag is available via **tag_exists** tag e.g.
 ```html
 <cms:if "<cms:tag_exists 'process_login' />"> .. </cms:if>

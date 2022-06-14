@@ -27,8 +27,8 @@ f81e29ae988b19699abd92c59906d0ee
 
 ## Related tags
 
-* base64_encode
-* base64_decode
+* [base64_encode](../base64_encode)
+* [base64_decode](../base64_decode)
 
 ## Support
 

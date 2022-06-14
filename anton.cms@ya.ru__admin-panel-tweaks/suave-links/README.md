@@ -1,4 +1,3 @@
-
 # Suave links
 
 Click without page reload in Admin-panel. Browser history supported!
