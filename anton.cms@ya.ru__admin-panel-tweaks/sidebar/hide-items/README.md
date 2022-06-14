@@ -4,7 +4,7 @@
 
 Can also hide system sections, like USERS.
 
-Read more here &ndash; https://www.couchcms.com/forum/viewtopic.php?f=8&t=9887
+Read more here &ndash; https://www.couchcms.com/forum/viewtopic.php?f=2&t=11464#p30519
 
 Set items to be hidden in sidebar directly in file `hide-items.php`.
 
