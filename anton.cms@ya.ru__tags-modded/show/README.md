@@ -2,11 +2,19 @@
 
 This modification adds new parameters to `<cms:show>` tag &mdash;
 - **case** &mdash; *upper, lower, title*
-- **encoding**
+- **encoding** — *UTF-8* (by default), *Windows-1251*...
 
-Discuss in forum &ndash; [open topic](https://www.couchcms.com/forum/viewtopic.php?f=8&t=13015)
+Parameters are optional. Tag **show** will naturally work as expected, handling JSON and variables, so if the parameters are not provided nothing changes.
 
 ## Example
+
+```html
+<cms:set example = 'CouchCMS is great' />
+<cms:show example case = 'upper' /> will display "COUCHCMS IS GREAT"
+<cms:show example case = 'lower' /> will display "couchcms is great"
+```
+### encoding
+
 ```html
 <cms:test
     ignore='0'
@@ -17,7 +25,7 @@ Discuss in forum &ndash; [open topic](https://www.couchcms.com/forum/viewtopic.p
 
 </cms:test>
 ```
-HTML:
+The code above prints —
 ```html
 HELLO WORLD
 hello world

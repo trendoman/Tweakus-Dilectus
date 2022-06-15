@@ -6,7 +6,6 @@
     *   @example  <cms:show case='upper' />
     *   @example  <cms:show case='title' />
     *   @example  <cms:show case='lower' encoding='Windows-1251' />
-    *   @link https://www.couchcms.com/forum/viewtopic.php?f=8&t=13015
     *   @author @dmore54, @trendoman <tony.smirnov@gmail.com>
     *   @date   20.05.2021
     */
@@ -20,7 +19,7 @@
             $params)
         );
 
-        switch ($case) {
+        switch (trim($case)) {
             case "u":
             case "upper":
               $type = MB_CASE_UPPER;
