@@ -32,6 +32,13 @@ hello world
 Привет, Антон
 ```
 
+
+## Installation
+
+Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.<br>
+Once read — never forget ☺
+
+
 ## Support
 
 See dedicated [**SUPPORT**](/SUPPORT.md) page.

@@ -7,9 +7,9 @@ Look for a dedicated *READMEs* for each modded tag.
 ## Contents
 
 1. ### [`<cms:func>`](func/)
-   Mod skips repeated definitions without showing "Error..". See [README](func/README.md) for example.
+   Mod allows repeated definitions without showing "Error..".
 2. ### [`<cms:show>`](show/)
-   Mod adds new parameters to `<cms:show>` tag. See [README](show/README.md) for examples.
+   Mod adds new parameters: **case** and **encoding**
 
 
 ## Installation

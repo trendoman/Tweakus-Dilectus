@@ -36,7 +36,8 @@ See [README](anton.cms%40ya.ru__variables-new/) for variables.
 
 ## Installation
 
-See dedicated [**INSTALL**](/INSTALL.md) page.
+Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.<br>
+Once read — never forget ☺
 
 ## Support
 
