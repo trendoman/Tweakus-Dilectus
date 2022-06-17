@@ -15,6 +15,7 @@ Look for a dedicated *READMEs* for each modded tag.
 ## Installation
 
 Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
+Once read — never forget ☺
 
 ## Support
 

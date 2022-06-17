@@ -1,4 +1,4 @@
-# [Modded `<cms:show>`](https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms%40ya.ru__tags-modded/show/README.md)
+# [Modded `<cms:show>`](https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms%40ya.ru__tags-modded/show/)
 
 This modification adds new parameters to `<cms:show>` tag &mdash;
 - **case** &mdash; *upper, lower, title*
