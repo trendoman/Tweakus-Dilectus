@@ -6,7 +6,7 @@ In short, it is a way to inject markup to a richtext editor which would have san
 
 Alternative to shortcodes is a 'textarea' editable field (see [**&raquo; Tags Reference – editable – type = 'textarea'**](https://docs.couchcms.com/tags-reference/editable/textarea.html#no_xss_check)) with a mandatory parameter **no_xss_check**.
 
-#### This is a collection of shortcodes for CouchCMS.
+### This is a collection of shortcodes for CouchCMS.
 
 Look for the *READMEs* in subfolders to see examples.
 

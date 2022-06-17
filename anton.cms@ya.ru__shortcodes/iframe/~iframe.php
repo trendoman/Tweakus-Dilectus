@@ -17,7 +17,7 @@
          'scrolling' => 'no',
          'frameborder' => '0',
          'marginheight' => '0',
-         'allow' => '0'
+         'allow' => ''
       ), $params) );
 
       $html =<<<EOS
