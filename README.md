@@ -10,6 +10,11 @@ Customize sidebar, list-view, form-view. Tweak display of editable fields, auto-
 
 See [README](anton.cms%40ya.ru__admin-panel-tweaks/) with contents.
 
+## [**Shortcodes**](anton.cms%40ya.ru__shortcodes/)
+
+Many useful shortcodes to embed tags into richtext editor.
+
+
 ## Aliases for tags
 
 Tired of forgetting complex tag names? Use your favorite shortcuts with this addon.
