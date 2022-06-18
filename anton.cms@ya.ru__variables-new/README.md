@@ -25,6 +25,9 @@ Check out *READMEs*, they have examples.
 * ### [k__million](k__million/)
    Variable contains a number *1.000.000*.
 
+* ### [k__routes](k__routes/)
+   Contains all defined routes via Custom Routes addon. See [**&raquo; Tutorial – Custom Routes**](https://github.com/trendoman/Midware/tree/main/tutorials/Custom-Routes).
+
 * ### [k__server](k__server/)
    View `S_SERVER` superglobal. Contains a few helpful variables such as `HTTP_USER_AGENT`.
 
