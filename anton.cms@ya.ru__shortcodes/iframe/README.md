@@ -44,7 +44,8 @@ Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
 
 ## Support
 
-
 See dedicated [**SUPPORT**](/SUPPORT.md) page.
 
-If you are not familiar with shortcodes, please visit [**&raquo; Miscellaneous - Shortcodes**](https://docs.couchcms.com/miscellaneous/shortcodes.html) in documentation.
+## Related pages
+
+* [**Documentation &raquo; Shortcodes**](https://docs.couchcms.com/miscellaneous/shortcodes.html)

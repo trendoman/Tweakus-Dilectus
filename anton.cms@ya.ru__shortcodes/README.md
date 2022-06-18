@@ -1,10 +1,10 @@
 # [Shortcodes](https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms%40ya.ru__shortcodes)
 
-If you are not familiar with shortcodes, please visit [**&raquo; Miscellaneous – Shortcodes**](https://docs.couchcms.com/miscellaneous/shortcodes.html) in documentation.
+If you are not familiar with shortcodes, please visit [**Documentation &raquo; Shortcodes**](https://docs.couchcms.com/miscellaneous/shortcodes.html) .
 
 In short, it is a way to inject markup to a richtext editor which would have sanitized the directly-pasted tags.
 
-Alternative to shortcodes is a 'textarea' editable field (see [**&raquo; Tags Reference – editable – type = 'textarea'**](https://docs.couchcms.com/tags-reference/editable/textarea.html#no_xss_check)) with a mandatory parameter **no_xss_check**.
+Alternative to shortcodes is a 'textarea' editable field (see [**Documentation &raquo; editable type = 'textarea'**](https://docs.couchcms.com/tags-reference/editable/textarea.html#no_xss_check)) with a mandatory parameter **no_xss_check**.
 
 ### This is a collection of shortcodes for CouchCMS.
 
