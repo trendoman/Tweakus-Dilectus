@@ -3,16 +3,16 @@
     /**
     *   Update template's settings if cms:config_list_view / cms:config_form_view were removed from cms:template.
     *   By default CouchCMS can not 'see' removed tags and keeps old values in database.
-    *	So this mod allows to clean saved values from database when the tag/tags are not present.
+    *	  So this mod allows to clean saved values from database when the tag/tags are not present.
     *
     *   @author Anton Smirnov aka Trendoman <tony.smirnov@gmail.com>
     *   @date   12.06.2019
     *   @last   14.02.2020
     */
 
-
     $FUNCS->add_event_listener( 'tag_config_list_view_executed', 'admin_template_configs_post_process');
     $FUNCS->add_event_listener( 'tag_config_form_view_executed', 'admin_template_configs_post_process');
+    $FUNCS->add_event_listener( 'tag_template_executed', 'admin_template_configs_update');
 
     // Note to PHP Developer:
     // Each tag creates a flag if tag was executed.
@@ -34,7 +34,6 @@
         return false;
     }
 
-    $FUNCS->add_event_listener( 'tag_template_executed', 'admin_template_configs_update');
     function admin_template_configs_update($tag_name){
         global $PAGE, $TAGS, $AUTH, $FUNCS;
         if( $AUTH->user->access_level < K_ACCESS_LEVEL_SUPER_ADMIN ){ return false; }

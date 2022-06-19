@@ -5,15 +5,18 @@ Tweak cleans up redundant data from configs left in database after configs were 
 ## Example
 
 Imagine you added a config to your template &mdash;
-```html
+
+```xml
 <cms:template title="Index">
   <cms:config_list_view limit='10' searchable='1'/>
 
   ..other editable fields...
 </cms:template>
 ```
+
 Then, one rainy day, you decide to remove it from that template completely &mdash;
-```html
+
+```xml
 <cms:template title="Index">
 
   ..other editable fields...
@@ -33,7 +36,8 @@ Poor CouchCMS does not see the tags &mdash;
 This little addon makes sure the values are cleaned up properly.
 
 **NOTE:** Alternatively, you may just leave tags without parameters within `cms:template` block and that will re-set the values. Actually, that's exactly what this addon does.
-```html
+
+```xml
 <cms:template title="Index">
   <cms:config_list_view />
   <cms:config_form_view />
@@ -42,17 +46,24 @@ This little addon makes sure the values are cleaned up properly.
 </cms:template>
 ```
 
-### Logic of PHP code:
+## Code intel
 
-1. When tag `:config_list_view` or `:config_form_view` is executed we set a flag.
-2. If tag was not executed it means it is not present inside `cms:template`.
+1. When tag 'cms:config_list_view' or 'cms::config_form_view' is present and executed we set a flag.
+2. If tag was not executed it means it is not present inside 'cms:template'.
 3. If the tag is not present, assume it was deleted and we need to clear the db.
 4. To clear the db, we forcibly re-run the missing tag without params, as if
-```html
-<cms:config_list_view />
-<cms:config_form_view />
-```
-because tag's native code will handle the db update naturally.
+
+   ```xml
+   <cms:config_list_view />
+   <cms:config_form_view />
+   ```
+   – because tag's native code will handle the db update naturally.
+
+Code does not run for anyone but Superadmin.
+
+## Installation
+
+Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
 
 ## Support
 
