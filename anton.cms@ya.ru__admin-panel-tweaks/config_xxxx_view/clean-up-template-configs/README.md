@@ -48,7 +48,7 @@ This little addon makes sure the values are cleaned up properly.
 
 ## Code intel
 
-1. When tag 'cms:config_list_view' or 'cms::config_form_view' is present and executed we set a flag.
+1. When tag 'cms:config_list_view' or 'cms:config_form_view' is present and executed we set a flag.
 2. If tag was not executed it means it is not present inside 'cms:template'.
 3. If the tag is not present, assume it was deleted and we need to clear the db.
 4. To clear the db, we forcibly re-run the missing tag without params, as if
