@@ -1,21 +1,21 @@
 ## Extended Users display
 
-Extended Users addon makes that the same user accounts appear at two different places - Administration section and Extended Users template. Tweak allows to display Admin/Superadmin users only in Administration section and Regular Users only in EU template.
+[**Extended Users**](#related-pages) addon makes that the same user accounts appear at two different places - Administration section and Extended Users template. Tweak allows to display Admin/Superadmin users only in Administration section and Regular Users only in EU template.
 
-> And now when you visit the core users section you'll find that it shows only the admin/super-admin/special accounts (i.e. skips all lowest level accounts that are created from the front-end using the extended template).
+Quoting **@kksidd** –
 
-> If for (perhaps debugging) you'd want to see all accounts listed here, add a `&debug=1` to the URL in admin panel and that would remove this filter temporarily.
+> And now when you visit the core users section you'll find that it shows only the admin/super-admin/special accounts (i.e. skips all lowest level accounts that are created from the front-end using the extended template). If for (perhaps debugging) you'd want to see all accounts listed here, add a `&debug=1` to the URL in admin panel and that would remove this filter temporarily.
 
 So now, the accounts are neatly segregated in two places -
+
 1. All admin level accounts are in core
 2. All lower level accounts (usually created from front-end) are in the extended users template.
-
 
 ## Equalize form-views
 
 > Coming to the second issue (different field layouts), we can normalize that by using `<cms:config_form_view>` in your **extended** template.
 
-```html
+```xml
 <!--
     config form GUI
 -->
@@ -56,6 +56,13 @@ So now, the accounts are neatly segregated in two places -
 </cms:config_form_view>
 ```
 
+## Related pages
+
+* [**Midware Core Concepts &raquo; Extended Users**](https://github.com/trendoman/Midware/tree/main/concepts/Extended-Users)
+
+## Installation
+
+Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
 
 ## Support
 

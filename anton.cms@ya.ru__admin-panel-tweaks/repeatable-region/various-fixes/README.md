@@ -8,10 +8,18 @@ Tweak consists of several changes to the `couch/addons/repeatable/tablegear/tabl
 4. Prevented a DOM jump when empty row appears. When table is empty, plugin tableGear adds an 'empty' row with 'empty' message on event `DOM ready`, which causes jump. If plugin is tricked to think that an empty row already was attached, then there is no jump.
 
 There was another tweak that allowed to disable a default empty row, but thanks to @KK it was fixed in the subsequent CouchCMS version. Now it is possible to add a parameter &mdash;
-```html
+
+```xml
 <cms:repeatable ... no_default_row = '1'>
 ```
 
+## Installation
+
+Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
+
+## Support
+
+See dedicated [**SUPPORT**](/SUPPORT.md) page.
 
 ## A letter from CouchCMS Original Developer to PHP enthusiasts
 

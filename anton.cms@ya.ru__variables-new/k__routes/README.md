@@ -4,21 +4,11 @@ Adds a new variable `k__routes` to the global context. It contains details about
 
 Variable only appears after addon [**Routes**](#related-pages) ('couch/addons/routes') is enabled via `couch/addons/kfunctions.php`.
 
-> Notation `k__` with double underscore is used to distinguish custom variables from native `k_` variables.<br>
-> Name starts with `k__` because such variables can not be overridden accidentally with tags `<cms:set>`, `<cms:put>`.
-
 ## Example
-
-Output of the tag `<cms:dump_all/>` displays this variable before the user-defined variables with value *Array*:
-```txt
-k__routes: Array
-```
-
-### listing
 
 List routes as JSON &mdash;
 
-```html
+```xml
 <cms:test
     ignore='0'
     >
@@ -29,20 +19,16 @@ List routes as JSON &mdash;
    </cms:if>
 </cms:test>
 ```
-<!--
 
-### result
+If you have defined some routes they'd certainly be dumped.
 
-```json
-```
+Output of the tag `<cms:dump_all/>` displays this variable before the user-defined variables with value *Array*:
 
-## Usage
-
--->
+`k__routes: Array`
 
 ## Related pages
 
-* [**&raquo; Tutorial – Custom Routes**](https://github.com/trendoman/Midware/tree/main/tutorials/Custom-Routes)
+* [**Midware Core Concepts &raquo; Custom Routes**](https://github.com/trendoman/Midware/tree/main/concepts/Custom-Routes)
 
 ## Installation
 

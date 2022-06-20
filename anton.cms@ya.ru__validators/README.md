@@ -1,14 +1,17 @@
 # [Validators](https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms%40ya.ru__validators)
 
-#### This is a collection of validators for editable fields in CouchCMS
-
-Look for the *READMEs* in subfolders to see examples.
+#### This is a collection of validators for [editable](#related-pages) fields in CouchCMS
 
 ## Contents
 
 * ### [no_duplicate_mail](no_duplicate_mail/)
-   Checks if the entered email is already in the database. View [README](no_duplicate_mail/).
 
+   Checks if the entered email is already in the database.
+
+## Related pages
+
+* [**Documentation &raquo; built-in validators**](https://docs.couchcms.com/tags-reference/editable.html#validator)
+* [**Documentation &raquo; Editable Regions**](https://docs.couchcms.com/concepts/editable-regions.html)
 
 ## Installation
 

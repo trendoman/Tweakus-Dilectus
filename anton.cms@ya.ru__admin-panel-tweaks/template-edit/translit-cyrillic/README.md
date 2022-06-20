@@ -6,10 +6,11 @@ Usually it is a requirement and very useful to convert cyrillic-only titles of c
 
 ![Transliteration of Russian](img/transliteration-russian.png)
 
-
 ## Installation
 
 Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
+
+Remove the ~ (tilde) from the path to enable tweak.
 
 ## Support
 

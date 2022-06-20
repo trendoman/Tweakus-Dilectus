@@ -2,19 +2,11 @@
 
 Adds a new variable `k__session` to the global context. It contains values from the `$_SESSION` superlobal array.
 
-> Notation `k__` with double underscore is used to distinguish custom variables from native `k_` variables.<br>
-> Name starts with `k__` because such variables can not be overridden accidentally with tags `<cms:set>`, `<cms:put>`.
-
 ## Example
 
-Output of the tag `<cms:dump_all/>` displays this variable before the user-defined variables with value *Array*:
-```txt
-k__session: Array
-```
+Let's print the content of session after setting some values to it –
 
-### listing
-
-```html
+```xml
 <cms:test
     ignore='0'
     >
@@ -29,7 +21,7 @@ k__session: Array
 </cms:test>
 ```
 
-### result
+Sample output (on my local machine) –
 
 ```json
 {
@@ -51,14 +43,30 @@ k__session: Array
 }
 ```
 
+Output of the tag `<cms:dump_all/>` displays this variable before the user-defined variables with value *Array*:
+
+`k__session: Array`
+
 ## Usage
 
 Variable gives access to user-defined session vars set by tag `<cms:set_session>` and Couch's *flash* messages set by tag `<cms:set_flash>`.
 
-If you are interested in one of the values print it with `<cms:show>` &mdash;
-```html
+If you are interested in one of the values print it with 'cms:show' &mdash;
+
+```xml
 <cms:show k__server.mysession />
 ```
+
+## Related tags
+
+* **set_session**
+* **get_session**
+* **set_flash**
+* **get_flash**
+
+## Installation
+
+Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
 
 ## Support
 

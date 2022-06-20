@@ -14,6 +14,10 @@ Normal is 48 &mdash;
 
 Most importantly, the mod **applies globally**, to all template at once, saving you a lot of time!
 
+## Installation
+
+Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
+
 ## Support
 
 See dedicated [**SUPPORT**](/SUPPORT.md) page.

@@ -14,6 +14,10 @@ After &mdash;
 
 ![after](img/example-after.png)
 
+## Installation
+
+Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
+
 ## Support
 
 See dedicated [**SUPPORT**](/SUPPORT.md) page.

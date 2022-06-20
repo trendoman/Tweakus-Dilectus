@@ -1,18 +1,14 @@
 # k__gpc
 
-Adds a new variable `k__gpc` to the global context. It contains values from GET, POST, COOKIE.
+Adds a new variable `k__gpc` to the global context. It contains values from **`G`ET**, **`P`OST**, **`C`OOKIE**.
 
-It is quite comfortable to use this variable instead of tag `<cms:gpc>`.
-
-> Notation `k__` with double underscore is used to distinguish custom variables from native `k_` variables.<br>
-> Name starts with `k__` because such variables can not be overridden accidentally with tags `<cms:set>`, `<cms:put>`.
+It is quite comfortable to use this variable instead of tag [**cms:gpc**](#related-tags).
 
 ## Example
-Since on the left side of the `<cms:if>` comparison there must be a variable or a value, not expression, the tag's variant requires an extra line.
 
-Compare direct access to values with **k__gpc** Vs regular usage of `<cms:gpc>` tag &mdash;
+Compare direct access to values with **k__gpc** Vs. regular usage of `<cms:gpc>` tag &mdash;
 
-```html
+```xml
 => http://my.couch/?test=now&pg=2
 
 <cms:test
@@ -24,29 +20,22 @@ Compare direct access to values with **k__gpc** Vs regular usage of `<cms:gpc>` 
    <cms:if my_gpc_test eq 'now'>Test is running!</cms:if>
 </cms:test>
 ```
-See how simple print can be done with either `<cms:show>` or `<cms:gpc>` &mdash;
+
+Output from variable or tag is identical &mdash;
+
 ```html
 => http://my.couch/?test=true&pg=2
 
 <cms:test
    ignore='0'
    >
-   <cms:show k__gpc.pg /> = <cms:gpc 'pg' /><br>
+   <cms:show k__gpc.pg /> equals to <cms:gpc 'pg' /><br>
 </cms:test>
 ```
 
-
-## Usage
-
-Output of the tag `<cms:dump_all/>` displays this variable before the user-defined variables with value *Array*:
-```txt
-k__gpc: Array
-```
-
-### listing
-
 Let's take a look at the full content of the JSON.
-```html
+
+```xml
 <cms:test
     ignore='0'
     >
@@ -59,9 +48,7 @@ Let's take a look at the full content of the JSON.
 </cms:test>
 ```
 
-### result
-
-Variable's JSON has values separated in named sections **get**, **post**, **cookie** and, next, all the same values combined.<br>
+Variable's JSON has values separated in named sections **get**, **post**, **cookie** and, next, all the same values combined —
 
 ```json
 {
@@ -99,12 +86,20 @@ Variable's JSON has values separated in named sections **get**, **post**, **cook
 }
 ```
 
-### compatibility
+Several sections and then all values together – designed to mimic original tag's parameter **method**. If you want to show in code that a value is expected to be passed via **post** method, use the extra hint e.g. `k__gpc.post.myvalue`, otherwise demonstrate an indifference to the source and access directly via `k__gpc.myvalue`.
 
-Variable **k__gpc** is compatible with a **method** set via `<cms:gpc>` tag. If you want to show in code that a value is expected to be passed via **post** method, use the extended syntax e.g. `k__gpc.post.myvalue`, otherwise use direct access &ndash; `k__gpc.myvalue`.
+Output of the tag `<cms:dump_all/>` displays this variable before the user-defined variables with value *Array*:
 
+`k__gpc: Array`
+
+## Related tags
+
+* [**Documentation &raquo; gpc**](https://docs.couchcms.com/tags-reference/gpc.html)
+
+## Installation
+
+Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
 
 ## Support
 
 See dedicated [**SUPPORT**](/SUPPORT.md) page.
-

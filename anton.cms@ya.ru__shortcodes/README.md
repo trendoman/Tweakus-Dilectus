@@ -15,7 +15,6 @@ Look for the *READMEs* in subfolders to see examples.
 * ### [iframe](iframe/)
    Embeds `<iframe>` with parameters.
 
-
 ## Installation
 
 Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.

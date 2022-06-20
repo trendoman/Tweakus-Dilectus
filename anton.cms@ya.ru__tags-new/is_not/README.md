@@ -1,27 +1,45 @@
 # `<cms:is_not>`
 
-A counter-tag for **is**.
+A counter-tag for [**cms:is**](#related-tags).
 
-Works for for non-associative arrays e.g.
-```html
+Works for for simple, non-associative [**arrays**](#related-pages) e.g.
+
+```xml
 <cms:set langs='["de", "fr", "es"]' is_json='1' />
 <cms:is_not val='br' in=langs />
-```
-## Example
-
-This tag's purpose is to have clearer code and remove the nesting e.g.
-```html
-<cms:if "<cms:not "<cms:is 'br' in=langs/>" />" >...</cms:if>
-```
-becomes
-```html
-<cms:if "<cms:is_not 'br' in=langs/>" >...</cms:if>
 ```
 
 ## Parameters
 
 * val
 * in
+
+## Example
+
+This tag's purpose is to have clearer code and remove the nesting e.g.
+
+```xml
+<cms:if "<cms:not "<cms:is 'br' in=langs/>" />" >...</cms:if>
+```
+
+becomes –
+
+```xml
+<cms:if "<cms:is_not 'br' in=langs/>" >...</cms:if>
+```
+
+## Related tags
+
+* **is**
+* **arr_val_exists**
+
+## Related pages
+
+* [**Midware Core Concepts &raquo; Couch Arrays**](https://github.com/trendoman/Midware/tree/main/concepts/Arrays)
+
+## Installation
+
+Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
 
 ## Support
 

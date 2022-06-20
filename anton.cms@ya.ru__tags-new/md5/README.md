@@ -1,10 +1,18 @@
 # `<cms:md5>`
 
-Calculates MD5 hash
+Calculates MD5 hash of any content.
 
+```xml
+<cms:md5 var=myvar />
+```
+
+## Parameters
+
+* var
 
 ## Example
-```html
+
+```xml
 <cms:test
     ignore='0'
     >
@@ -16,19 +24,21 @@ Calculates MD5 hash
 
 </cms:test>
 ```
-HTML:
-```html
+
+Output –
+
+```
 f81e29ae988b19699abd92c59906d0ee
 ```
 
-## Parameters
-
-* var
-
 ## Related tags
 
-* [base64_encode](../base64_encode)
-* [base64_decode](../base64_decode)
+* [**base64_encode**](../base64_encode)
+* [**base64_decode**](../base64_decode)
+
+## Installation
+
+Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
 
 ## Support
 

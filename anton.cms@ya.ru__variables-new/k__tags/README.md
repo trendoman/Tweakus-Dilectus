@@ -4,21 +4,11 @@ Adds a new variable `k__tags` to the global context. It contains names of all pr
 
 Additional tags that come with addons that were not properly enabled in `couch/addons/kfunctions.php` are not registered and therefore not listed.
 
-> Notation `k__` with double underscore is used to distinguish custom variables from native `k_` variables.<br>
-> Name starts with `k__` because such variables can not be overridden accidentally with tags `<cms:set>`, `<cms:put>`.
-
 ## Example
 
-Output of the tag `<cms:dump_all/>` displays this variable before the user-defined variables with value *Array*:
-```txt
-k__tags: Array
-```
+List array of tags as JSON &mdash;
 
-### listing
-
-List tagnames as JSON &mdash;
-
-```html
+```xml
 <cms:test
     ignore='0'
     >
@@ -31,7 +21,8 @@ List tagnames as JSON &mdash;
 ```
 
 List tagnames as an ordered list &mdash;
-```html
+
+```xml
 <cms:test
    ignore='0'
    >
@@ -43,9 +34,7 @@ List tagnames as an ordered list &mdash;
 </cms:test>
 ```
 
-### result
-
-JSON
+Output as JSON –
 
 ```json
 [
@@ -61,7 +50,8 @@ JSON
 ]
 ```
 
-HTML
+Output as HTML –
+
 ```html
 1. abort
 2. add
@@ -73,28 +63,42 @@ HTML
 196. zebra
 ```
 
+
+Output of the tag `<cms:dump_all/>` displays this variable before the user-defined variables with value *Array*:
+
+`k__tags: Array`
+
 ## Usage
 
-Using the examples above, feed your curiosity and list all present tags.<br>
+Using the examples above, feed your curiosity and list all present tags.
+
 At this moment, there is little usage of this variable, if any ☺.
 
 Maybe if you study some addon, like Cart or Extended Users/Folders/Comments addon, it may be beneficial to see all tags that it has to offer.
 
-Normally, we can check if a certain tag is available via **tag_exists** tag e.g.
-```html
+We can also check if a certain known tag is available via [**cms:tag_exists**](#related-tags) e.g.
+
+```xml
 <cms:if "<cms:tag_exists 'process_login' />"> .. </cms:if>
 ```
-Same can be done with **k__tags** variable and tag **is** (a handy synonym of **arr_val_exists** tag) &mdash;
 
-```html
+Same can be done with **k__tags** array and tag [**cms:is**](#related-tags), a handy synonym of [**cms:arr_val_exists**](#related-tags) &mdash;
+
+```xml
 <cms:if "<cms:is 'process_login' in=k__tags />"> .. </cms:if>
 ```
 
 Send me your example of **k__tags** usage, if you find any other one.
 
-## Relevant pages
+## Related tags
 
-* tag_exists
+* [**Midware Tags Reference &raquo; tag_exists**](https://github.com/trendoman/Midware/tree/main/tags-reference/tag_exists.md)
+* **cms:is**
+* **cms:arr_val_exists**
+
+## Installation
+
+Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
 
 ## Support
 

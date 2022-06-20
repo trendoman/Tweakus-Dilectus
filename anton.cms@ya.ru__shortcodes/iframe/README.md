@@ -27,12 +27,18 @@ If values for the **width** or **height** are not provided, frame is set to *300
 ```html
 [iframe src="http://www.somesite.com/" width="100%" height="100" scrolling="yes" frameborder="1" marginheight="2" allow="picture-in-picture"]
 ```
+
 ### frontend
 
 ```xml
 <cms:do_shortcodes><cms:show my_content /></cms:do_shortcodes>
 ```
-– where *my_content* is your (richtext) editable field.
+
+– here *my_content* is your (richtext) editable field.
+
+## Related pages
+
+* [**Documentation &raquo; Shortcodes**](https://docs.couchcms.com/miscellaneous/shortcodes.html)
 
 ## Installation
 
@@ -40,12 +46,9 @@ Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
 
 **V.IMP:**
 * Remove the tilde from the filename to enable the shortcode.
-* Do not use the sample `kfunctions.php` file that was provided as part of the documentation.
+* Do not use the sample `kfunctions.php` file that was provided as part of the [**original documentation**](#related-pages). Use the file `couch/addons/kfunctions.php` instead.
 
 ## Support
 
 See dedicated [**SUPPORT**](/SUPPORT.md) page.
 
-## Related pages
-
-* [**Documentation &raquo; Shortcodes**](https://docs.couchcms.com/miscellaneous/shortcodes.html)

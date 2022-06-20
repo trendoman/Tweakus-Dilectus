@@ -1,14 +1,20 @@
 # `<cms:write>`
 
-Writes data into files. Discussion &mdash; [forum topic](https://www.couchcms.com/forum/viewtopic.php?f=8&t=11377&p=38001#p30085)
+Writes data into files.
+
+```xml
+<cms:write file='greeting.html'>Hi Anton!</cms:write>
+```
 
 ## Parameters
+
 * file
 * truncate
 * add_newline
 
 ## Example
-```html
+
+```xml
 <cms:test
    ignore='0'
    >
@@ -22,38 +28,53 @@ Writes data into files. Discussion &mdash; [forum topic](https://www.couchcms.co
 
 ## Usage
 
-All content enclosed within this tag will be written into the file specified as its first parameter.<br>
-File is always considered **relative to the site's root**.
-```html
+All content enclosed within this tag will be written into the file specified as its first parameter. File is always considered **relative to the site's root**.
+
+```xml
 <cms:write 'my.txt' >Hello world!</cms:write>
 ```
-The code above will write "Hello world!" into a file named 'my.txt' present in the **site's root** (i.e. the parent folder of 'couch').
-If the file is not present, the tag will create it. The created file should now contain the following -
-```txt
-   Hello world!
+
+The code above will write "Hello world!" into a file named 'my.txt' present in the **site's root** (i.e. the parent folder of 'couch'). If the file is not present, the tag will create it.
+
+The created file should now contain the following -
+
+```
+Hello world!
 ```
 
-**NOTE:** If you skip the parameter **file**, tag will use *my_log.txt* as filename.
+If you skip the parameter **file**, tag will use *my_log.txt* as filename.
+
+```xml
+<cms:write><cms:date /></cms:write>
+```
 
 If newlines are required you can either -
-* Add the newline as part of the data e.g. as follows &mdash;
-   ```html
-   <cms:write 'my.txt' >
-   Hello world!
-   </cms:write>
-   ```
-* Or, set **add_newline** parameter to *1* e.g.as follows &mdash;
-   ```html
-   <cms:write 'my.txt' add_newline='1'>Hello world!</cms:write>
-   ```
 
-If the specified file already exists, this tag by default appends data to that file's existing contents.<br>
-If you wish the tag to discard any existing file and create a new file, set its **truncate** parameter to *1*.
-```html
+a. Add the newline as part of the data –
+
+```xml
+<cms:write 'my.txt' >
+Hello world!
+</cms:write>
+```
+
+or b. set **add_newline** parameter to *1* –
+
+```xml
+<cms:write 'my.txt' add_newline='1'>Hello world!</cms:write>
+```
+
+If the specified file already exists, this tag by default appends data to that file's existing contents. If you wish the tag to discard any existing file and create a new file, set its **truncate** parameter to *1* –
+
+```xml
 <cms:repeat '3'>
-   <cms:write 'my.txt' add_newline='1' truncate='1'>Hello world!</cms:write>
+   <cms:write 'my.txt' add_newline='1' truncate='1'><cms:zebra 'a' 'b' 'c' /></cms:write>
 </cms:repeat>
 ```
+
+## Installation
+
+Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
 
 ## Support
 

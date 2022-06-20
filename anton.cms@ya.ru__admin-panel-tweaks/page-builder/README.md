@@ -76,6 +76,12 @@ Code for that function simply passes back whatever we set as the '_pb_template' 
 
 `~~~~~~~~~~~~ end quote ~~~~~~~~~~`
 
+## Installation
+
+Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
+
+Remove the ~ (tilde) from the path to enable tweak.
+
 ## Support
 
 See dedicated [**SUPPORT**](/SUPPORT.md) page.

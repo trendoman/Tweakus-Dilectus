@@ -2,8 +2,19 @@
 
 Performs base64 encoding.
 
+```xml
+<cms:base64_encode 'Hello, Dolly!' />
+```
+
+## Parameters
+
+* var
+
 ## Example
-```html
+
+Pass a text to be encoded via parameter or as enclosed content –
+
+```xml
 <cms:test
     ignore='0'
     >
@@ -16,20 +27,22 @@ Performs base64 encoding.
 
 </cms:test>
 ```
-HTML:
-```html
+
+Output –
+
+```
 MS4x
 U2FtcGxlIHRleHQgaW4gYSB0YWctcGFpcg==
 ```
 
-## Parameters
-
-* var
-
 ## Related tags
 
-* base64_decode
-* md5
+* [**base64_decode**](../base64_decode)
+* [**md5**](../md5)
+
+## Installation
+
+Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
 
 ## Support
 

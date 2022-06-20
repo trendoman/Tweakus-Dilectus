@@ -2,15 +2,19 @@
 
 Addon allows to use a more comfortable name for a tag.
 
-Edit the code in `aliased-tags.php` to review existing aliases and make your own additions.
-
-Discussion of the addon is in the forum [topic](https://www.couchcms.com/forum/viewtopic.php?f=3&t=12536).
+Open file `aliased-tags.php` in editor to review existing aliases and make your own additions.
 
 ## Example:
 
-```html
-<cms:slashes> instead of <cms:add_slashes>
+```xml
+<cms:slashes> instead of <cms:addslashes>
 <cms:qs> instead of <cms:add_querystring>
+```
+Format of substitution list is easy to edit –
+
+```php
+/* 'alias'  => 'real_tag' */
+'slashes'   => 'addslashes',
 ```
 
 ## Installation

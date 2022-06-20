@@ -1,21 +1,24 @@
 # [Modded `<cms:show>`](https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms%40ya.ru__tags-modded/show/)
 
-This modification adds new parameters to `<cms:show>` tag &mdash;
-- **case** &mdash; *upper, lower, title*
-- **encoding** — *UTF-8* (by default), *Windows-1251*...
+This modification adds new parameters to [**cms:show**](#related-tags) tag &mdash;
+- **case** &mdash; with values: *upper, lower, title*
+- **encoding** — with possible values: *UTF-8* (by default), *Windows-1251*...
 
 Parameters are optional. Tag **show** will naturally work as expected, handling JSON and variables, so if the parameters are not provided nothing changes.
 
 ## Example
 
-```html
-<cms:set example = 'CouchCMS is great' />
-<cms:show example case = 'upper' /> will display "COUCHCMS IS GREAT"
-<cms:show example case = 'lower' /> will display "couchcms is great"
-```
-### encoding
+Trying different cases –
 
-```html
+```xml
+<cms:set example = 'CouchCMS is great' />
+<cms:show example case = 'upper' /> == "COUCHCMS IS GREAT"
+<cms:show example case = 'lower' /> == "couchcms is great"
+```
+
+Trying encoding over cyrillic string –
+
+```xml
 <cms:test
     ignore='0'
     >
@@ -25,21 +28,23 @@ Parameters are optional. Tag **show** will naturally work as expected, handling 
 
 </cms:test>
 ```
-The code above prints —
-```html
+
+with output —
+
+```
 HELLO WORLD
 hello world
 Привет, Антон
 ```
 
+## Related tags
+
+* **show**
 
 ## Installation
 
-Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.<br>
-Once read — never forget ☺
-
+Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
 
 ## Support
 
 See dedicated [**SUPPORT**](/SUPPORT.md) page.
-

@@ -2,19 +2,11 @@
 
 Adds a new variable `k__server` to the global context. It contains values from the `$_SERVER` superlobal array.
 
-> Notation `k__` with double underscore is used to distinguish custom variables from native `k_` variables.<br>
-> Name starts with `k__` because such variables can not be overridden accidentally with tags `<cms:set>`, `<cms:put>`.
-
 ## Example
 
-Output of the tag `<cms:dump_all/>` displays this variable before the user-defined variables with value *Array*:
-```txt
-k__server: Array
-```
+Let's print the variable –
 
-### listing
-
-```html
+```xml
 <cms:test
     ignore='0'
     >
@@ -27,7 +19,7 @@ k__server: Array
 </cms:test>
 ```
 
-### result
+Sample output (on my local machine) –
 
 ```json
 {
@@ -82,12 +74,21 @@ k__server: Array
 }
 ```
 
+Output of the tag `<cms:dump_all/>` displays this variable before the user-defined variables with value *Array*:
+
+`k__server: Array`
+
 ## Usage
 
-If you are interested in one of the values, e.g. a visitor's user agent, print it with `<cms:show>` and use CAPITAL LETTERS &mdash;
-```html
+If you are interested in one of the values, e.g. a visitor's user agent or ip address, print it with 'cms:show' and use CAPITAL LETTERS &mdash;
+
+```xml
 <cms:show k__server.HTTP_USER_AGENT />
 ```
+
+## Installation
+
+Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
 
 ## Support
 

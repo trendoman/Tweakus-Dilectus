@@ -14,7 +14,8 @@ $FUNCS->register_admin_menuitem( array('name'=>'_myfolder_', 'title'=>'MyFolder'
 ```
 
 Templates can be configured to become child items of the section with parameter **parent**.
-```html
+
+```xml
 <cms:template ... parent='_myfolder_' ... />
 ```
 

@@ -2,19 +2,21 @@
 
 #### This is a collection of mods for CouchCMS Tags.
 
-Look for a dedicated *READMEs* for each modded tag.
-
 ## Contents
 
-1. ### [`<cms:func>`](func/)
+* ### [`<cms:func>`](func/)
+
    Mod allows repeated definitions without showing "Error..".
-2. ### [`<cms:show>`](show/)
+
+* ### [`<cms:show>`](show/)
+
    Mod adds new parameters: **case** and **encoding**
 
 
 ## Installation
 
 Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
+
 Once read — never forget ☺
 
 ## Support

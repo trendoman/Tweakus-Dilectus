@@ -2,21 +2,13 @@
 
 Adds a new variable `k__defined` to the global context.
 
-It contains a few constants defined in CouchCMS and not visible in extended dump (using tag `<cms:dump_all />`).
-
-> Notation `k__` with double underscore is used to distinguish custom variables from native `k_` variables.<br>
-> Name starts with `k__` because such variables can not be overridden accidentally with tags `<cms:set>`, `<cms:put>`.
+It contains a few constants defined in CouchCMS but not visible in extended dump (using tag `<cms:dump_all />`).
 
 ## Example
 
-Output of the tag `<cms:dump_all/>` displays this variable before the user-defined variables with value *Array*:
-```txt
-k__defined: Array
-```
+Let's print the content of the variable –
 
-### listing
-
-```html
+```xml
 <cms:test
     ignore='0'
     >
@@ -29,7 +21,7 @@ k__defined: Array
 </cms:test>
 ```
 
-### result
+Sample output (from my local machine) –
 
 ```json
 {
@@ -92,7 +84,34 @@ k__defined: Array
 }
 ```
 
+Output of the tag `<cms:dump_all/>` displays this variable before the user-defined variables with value *Array*:
+
+`k__defined: Array`
+
+## Usage
+
+Some defined values were previously available only with PHP code, for instance the actual names of database tables – K_TBL_PAGES, K_TBL_TEMPLATES, etc.. The values of these constants depends on defined K_DB_TABLES_PREFIX (in `config.php`), so building an SQL query with tag 'cms:query' previously necessitated a mandatory PHP code echoing the table names. With **k__defined** we can access them directly, as in
+
+```xml
+<cms:show k__defined.K_TBL_PAGES />
+```
+
+to place in a query –
+
+```xml
+<cms:set sql = "<cms:concat p1='SELECT * FROM ' p2=k__defined.K_TBL_TEMPLATES p3=' WHERE ...' />" />
+```
+
+Next, constants K_CACHE_OPCODES, K_CACHE_SETTINGS, K_USE_CACHE allow to set up a strategy that takes into account caching status. When cache is enabled, code might switch to using javascript to request values via ajax calls to api.
+
+Code designed to run both in admin-panel and frontend may benefit from different algorythms depending on the value of K_ADMIN.
+
+Hope it becomes clear how useful this variable might be under circumstances.
+
+## Installation
+
+Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
+
 ## Support
 
 See dedicated [**SUPPORT**](/SUPPORT.md) page.
-
