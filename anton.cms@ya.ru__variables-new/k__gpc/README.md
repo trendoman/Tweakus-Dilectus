@@ -21,7 +21,9 @@ Compare direct access to values with **k__gpc** Vs. regular usage of `<cms:gpc>`
 </cms:test>
 ```
 
-Output from variable or tag is identical &mdash;
+Using the variable saves one extra line of code.
+
+Next, output from variable or tag is identical &mdash;
 
 ```html
 => http://my.couch/?test=true&pg=2

@@ -11,6 +11,6 @@
    List all registered tags.
 * ## [Variables &raquo; k__defined](anton.cms@ya.ru__variables-new/k__defined)
    View Couch constants.
-* ## [Admin-panel &raquo; Suave links](anton.cms@ya.ru__tags-aliased)
+* ## [Admin-panel &raquo; Suave links](anton.cms@ya.ru__admin-panel-tweaks/suave-links)
    No page reload in Admin-panel.
 * ## [Aliases for tags](anton.cms@ya.ru__tags-aliased) ○ Addon
