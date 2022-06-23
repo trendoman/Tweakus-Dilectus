@@ -1,4 +1,4 @@
-# [Modded `<cms:func>`](https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms%40ya.ru__tags-modded/func/README.md)
+# [Modded `<cms:func>`](https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms%40ya.ru__tags-modded/func)
 
 Allows to ignore double-declaration of funcs.
 

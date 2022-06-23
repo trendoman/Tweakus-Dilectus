@@ -2,6 +2,8 @@
 
 *Latest on top*
 
+* ## [Modded tags &raquo; call](anton.cms@ya.ru__tags-modded/call)
+   Trim output and allow mixed named/unnamed params
 * ## [Variables &raquo; k__routes](anton.cms@ya.ru__variables-new/k__routes)
    Helpful variable for 'Custom Routes' addon.
 * ## [Shortcodes &raquo; iframe](anton.cms@ya.ru__shortcodes/iframe)

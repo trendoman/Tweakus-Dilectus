@@ -4,6 +4,10 @@
 
 ## Contents
 
+* ### [`<cms:call>`](call/)
+
+   Mod automatically trims the output and allows mixed named/unnamed parameters.
+
 * ### [`<cms:func>`](func/)
 
    Mod allows repeated definitions without showing "Error..".

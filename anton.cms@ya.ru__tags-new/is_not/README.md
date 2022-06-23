@@ -2,7 +2,7 @@
 
 A counter-tag for [**cms:is**](#related-tags).
 
-Works for for simple, non-associative [**arrays**](#related-pages) e.g.
+Works for simple, non-associative [**arrays**](#related-pages) e.g.
 
 ```xml
 <cms:set langs='["de", "fr", "es"]' is_json='1' />
