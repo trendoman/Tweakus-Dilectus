@@ -32,8 +32,13 @@
             } elseif ( isset($unnamed[0]) ){
                $into[$k] = array_shift($unnamed);
             }
-            $params[] = array('lhs'=>$k,'op'=>'=','rhs'=>$into[$k]);
          }
+
+         $named = $into+$named;
+         foreach( $named as $k=>$v ){
+            $params[] = array('lhs'=>$k,'op'=>'=','rhs'=>$named[$k]);
+         }
+
          return $params;
       }
 
