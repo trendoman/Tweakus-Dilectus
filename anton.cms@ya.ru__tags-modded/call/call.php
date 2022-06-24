@@ -18,31 +18,7 @@
       $func = $FUNCS->funcs[$name];
       $_param = array_shift( $params );
 
-      function prefill_params( $into, $from ){
-         $named = $unnamed = $params = array();
-
-         foreach( $from as $param ){
-            if( $param['lhs'] ){ $named[$param['lhs']] = $param['rhs']; }
-            else { $unnamed[] = $param['rhs']; }
-         }
-
-         foreach( $into as $k=>$v ){
-            if( isset($named[$k]) ){
-               $into[$k] = $named[$k];
-            } elseif ( isset($unnamed[0]) ){
-               $into[$k] = array_shift($unnamed);
-            }
-         }
-
-         $named = $into+$named;
-         foreach( $named as $k=>$v ){
-            $params[] = array('lhs'=>$k,'op'=>'=','rhs'=>$named[$k]);
-         }
-
-         return $params;
-      }
-
-      $params = prefill_params( $func['params'], $params );
+      $params = _get_named_params( $func['params'], $params );
       array_unshift($params, $_param);
 
       return $break = false;
@@ -51,6 +27,30 @@
    $FUNCS->add_event_listener( 'tag_call_executed', function($tag_name, &$params, $node, &$html){
       $html = trim($html);
    });
+
+   function _get_named_params ( $into, $from ) {
+      $named = $unnamed = $params = array();
+
+      foreach( $from as $param ){
+         if( $param['lhs'] ){ $named[$param['lhs']] = $param['rhs']; }
+         else { $unnamed[] = $param['rhs']; }
+      }
+
+      foreach( $into as $k=>$v ){
+         if( isset($named[$k]) ){
+            $into[$k] = $named[$k];
+         } elseif ( isset($unnamed[0]) ){
+            $into[$k] = array_shift($unnamed);
+         }
+      }
+
+      $named = $into+$named;
+      foreach( $named as $k=>$v ){
+         $params[] = array('lhs'=>$k,'op'=>'=','rhs'=>$named[$k]);
+      }
+
+      return $params;
+   }
 
    /*
    // ~~~~~~~~~~~~~
