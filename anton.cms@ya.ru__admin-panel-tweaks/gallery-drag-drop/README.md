@@ -1,26 +1,43 @@
-<style>
+# Reorderable gallery (drag & drop)
 
-    /* Spinner CSS */
-    div#loader {
-        border: 16px solid #f3f3f3; /* Light grey */
-        border-top: 16px solid #e4e4e4; /* Couch-like */
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        position: absolute;
-        top: 50%;
-        left: 10%;
-        animation: spin 0.5s linear infinite;
-        transform: translate3d(-50%, -50%, 0);
-    }
+Allows to rearrange images by mouse, greatly simplifies sorting.
 
-    @keyframes spin {
-        0% { transform: translate3d(-50%, -50%, 0) rotate(0deg); }
-        100% { transform: translate3d(-50%, -50%, 0) rotate(360deg); }
-    }
+Demo —
 
-    #k_overlay { display: none!important;} /* can disable default dark overlay */
-</style>
+https://user-images.githubusercontent.com/6024107/175763951-deba632f-7bc8-4377-9c59-0a9e0b3b9a61.mp4
 
-<div id="loader"></div>
+This is my amazing drag-n-drop ajax-powered solution for Couch Gallery templates. It is based on famous [**Dragula.js**](https://github.com/bevacqua/dragula) library.
 
+Easy to install, it additionally fixes a few things for gallery templates —
+
+* If Root doesn't contain images, but contains a Subfolder with images, the will be no weird "Empty" infomessage.
+*	Gallery name length changed from 20 to 30
+* Screen is no longer dimmed when position is changed by buttons in default regime.
+
+## Installation
+
+Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
+
+In essense —
+
+* Keep this tweak enabled (i.e. `gallery-drag-drop.php`)
+* Move folder `theme-gallery-dragndrop` to `couch/theme` directory
+* Edit Couch config e.g.
+
+   ```php
+   define( 'K_ADMIN_THEME', 'theme-gallery-dragndrop' );
+   ```
+
+* Add mandatory configuration `orderby='weight'` to your gallery template e.g.
+
+   ```xml
+   <cms:template ... gallery='1'>
+      <!-- editable fields here -->
+
+      <cms:config_list_view orderby='weight' />
+   </cms:template>
+   ```
+
+## Support
+
+See dedicated [**SUPPORT**](/SUPPORT.md) page.

@@ -1,0 +1,263 @@
+<div id="gallery-listing">
+    <div id="listing">
+        <cms:set my_max_items_in_row = '5' />
+        <cms:set my_gallery_folder_count='0' />
+        <cms:set my_cur_folder_count='0' />
+        <cms:set my_page_num="<cms:gpc method='get' var='pg' default='1' />"/>
+
+        <cms:capture into='my_gallery_items' >
+            <div id="draggable">
+                <cms:pages
+                    masterpage       = k_template_name
+                    id               = k_selected_pageids
+                    folder           = k_selected_foldername
+                    orderby          = k_selected_orderby
+                    order            = k_selected_order
+                    custom_field     = k_selected_custom_field
+                    paginate         = '1'
+                    limit            = k_selected_limit
+                    show_unpublished = '1'
+                    show_future_entries = '1'
+                    page_name        = "<cms:if k_selected_exclude>NOT <cms:show k_selected_exclude /></cms:if>"
+                    base_link        = k_route_link
+                    token            = k_cur_token
+                    include_subfolders = '0'
+                >
+
+                    <cms:no_results>
+                        <cms:capture into='my_folder_empty' >
+                            <cms:show_info>
+                                <h4><cms:localize 'folder_empty' /></h4>
+                            </cms:show_info>
+                        </cms:capture>
+                    </cms:no_results>
+
+                    <cms:render 'gallery_item'
+                        max_in_row = my_max_items_in_row
+                        current_pos = k_count
+                        start_from = my_gallery_folder_count
+                    />
+
+                    <cms:if k_paginated_bottom >
+                        <cms:set my_paginator="<cms:render 'paginator' />" 'parent' />
+
+                        <cms:capture into='my_list_action'>
+                            <div style="clear:both;"></div>
+                            <div class="select-all">
+                                <cms:render 'list_checkbox' for_header='1' text_label='1' />
+                            </div>
+                        </cms:capture>
+
+                    </cms:if>
+                </cms:pages>
+            </div>
+        </cms:capture>
+
+        <cms:if "<cms:not k_selected_foldername />" ><cms:ignore>
+                if: root
+                else: subfolder
+            </cms:ignore>
+            <cms:set has_subfolder = k_folder_immediate_children scope='global' />
+        <cms:else />
+            <cms:folders
+                 root=k_selected_foldername
+                 hierarchical='1'
+                 depth='1'
+                 paginate='1'
+                 limit='1'>
+                <cms:set has_subfolder = k_folder_immediate_children scope='global' />
+            </cms:folders>
+        </cms:if>
+
+        <cms:if "<cms:not has_subfolder />" >
+            <cms:show my_folder_empty />
+        </cms:if>
+
+        <cms:if my_page_num='1' && "<cms:not k_selected_custom_field />">
+            <cms:folders
+                childof=k_selected_foldername
+                hierarchical='1'
+                depth='1'
+                orderby='weight'>
+
+                    <cms:set my_gallery_folder_count=k_total_folders scope='parent' />
+                    <cms:incr my_cur_folder_count />
+
+                    <cms:render 'gallery_folder'
+                        max_in_row = my_max_items_in_row
+                        current_pos = my_cur_folder_count
+                    />
+            </cms:folders>
+        </cms:if>
+
+        <cms:show my_gallery_items />
+    </div>
+    <cms:show my_list_action />
+</div>
+
+<cms:render 'gallery_upload' />
+
+<cms:admin_load_css path="<cms:show k_theme_link />assets/dragula-master/dist/dragula.min.css" />
+<cms:admin_load_js path="<cms:show k_theme_link />assets/dragula-master/dist/dragula.min.js" />
+
+<cms:admin_add_js>
+    var DragAndDrop = function() {
+
+        //
+        // Setup Dragula module components
+        //
+
+        var _componentDragula = function() {
+            if (typeof dragula == 'undefined') {
+                console.warn('Warning - dragula.min.js is not loaded.');
+                return;
+            }
+
+            //
+            // Draggable gallery items
+            //
+
+            let myItems = []; // array of gallery items pre-drag
+            let myContainer = document.getElementById('draggable'); // container of gallery items
+            let startPosition, dropPosition;
+
+            dragula([myContainer], {
+                moves: function (el, container, handle) {
+                    return (container.id == 'draggable')? true : false; // disallow dragging of non-draggable items, such as Folders
+                },
+                accepts: function (el, target, source, sibling) {
+                    return true; // don't limit any drags
+                },
+                invalid: function (el, handle) {
+                    return handle.className === 'btn btn-actions'; // exclude the action button
+                },
+                revertOnSpill: false // spilling will put the element back where it was dragged from, if this is true
+            }).on('drag', function (el, source) {
+
+                startPosition = undefined;
+                dropPosition = undefined;
+
+                myItems = Array.from(source.children,(e) => {return e.id;})
+                startPosition = myItems.indexOf(el.id);
+
+            }).on('drop', function (el, target, source, sibling) {
+
+                dropPosition = undefined;
+
+                myItemsAfterDrop = Array.from(target.children,(e) => {return e.id;})
+                dropPosition = myItemsAfterDrop.indexOf(el.id);
+
+                if( dropPosition == undefined || startPosition == undefined ) return;
+
+                // Arrays of only repositioned items
+                if( dropPosition > startPosition ){
+                    affectedItemsOldOrder = myItems.slice(startPosition, dropPosition+1);
+                    affectedItemsNewOrder = myItemsAfterDrop.slice(startPosition, dropPosition+1);
+                }else{
+                    affectedItemsOldOrder = myItems.slice(dropPosition, startPosition+1);
+                    affectedItemsNewOrder = myItemsAfterDrop.slice(dropPosition, startPosition+1);
+                }
+
+                // begin db-update
+                nonce = "<cms:create_nonce action='ajax_action_reorder_gallery' />";
+
+                $.ajax({
+                    dataType: 'html',
+                    url: '<cms:show k_admin_link />ajax.php?act=reorder_gallery&nonce=' + nonce,
+                    type: 'POST',
+                    data: {
+                        source: affectedItemsOldOrder,
+                        target: affectedItemsNewOrder
+                    },
+                })
+                .done(function( data ){
+                    toastr.success("Your changes have been saved", "Success", { // TODO: localize
+                        "positionClass": "toast-bottom-right",
+                        "showDuration": "250",
+                        "hideDuration": "250",
+                        "timeOut": "700",
+                        "extendedTimeOut": "500",
+                        "icon": '<cms:show_icon 'check' />'
+                    });
+                })
+                .always(function() {
+                    // release breath?
+                });
+
+
+            }); // on.drop end
+        }; // _componentDragula function end
+
+
+        //
+        // Return objects assigned to module
+        //
+        return {
+            init: function() {
+                _componentDragula();
+            }
+        }
+    }();
+
+
+    // Initialize module
+    // ------------------------------
+
+    <cms:if k_selected_orderby == 'weight'>
+    document.addEventListener('DOMContentLoaded', function() {
+        DragAndDrop.init();
+    });
+
+    $( document ).ajaxComplete(function( event, xhr, settings ) {
+        if(settings.data.indexOf( 'k_updown' ) == 0){
+            DragAndDrop.init(); // restore draggable after default k_updown event
+        }
+    });
+    <cms:else />
+       <cms:abort>
+          <h3>Theme "<cms:show k_theme_name />" requires parameter *** orderby='weight' *** in tag <i>cms:config_list_view</i> in <cms:show k_template_name />.<br>Example —</h3>
+          <pre>
+             &lt;cms:config_list_view orderby='weight' /&gt;
+          </pre>
+          <p>Add the code, then visit <a href="<cms:link k_template_name />" target="_blank"><cms:link k_template_name /></a> to persist changes.</p>
+          <script>
+             console.log("Warning: Drag and drop was disabled, due to missing parameter *** orderby='weight' *** in user tag cms:config_list_view!");
+          </script>
+       </cms:abort>
+    </cms:if>
+
+</cms:admin_add_js>
+
+
+<cms:admin_add_js>
+    // Spinner
+    var $loading = $('<div/>', {id: 'loader'});
+    $( document ).ready(function(){
+       $loading.hide().appendTo( 'body' );
+    }).ajaxStart(function(){$loading.show();})
+      .ajaxStop(function(){$loading.hide();})
+</cms:admin_add_js>
+
+<cms:admin_add_css>
+
+    /* Spinner CSS */
+    div#loader {
+        border: 16px solid #f3f3f3; /* Light grey */
+        border-top: 16px solid #e4e4e4; /* Couch-like */
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        animation: spin 0.5s linear infinite;
+        transform: translate3d(-50%, -50%, 0);
+    }
+
+    @keyframes spin {
+        0% { transform: translate3d(-50%, -50%, 0) rotate(0deg); }
+        100% { transform: translate3d(-50%, -50%, 0) rotate(360deg); }
+    }
+
+    #k_overlay { display: none!important;} /* can disable default dark overlay */
+</cms:admin_add_css>

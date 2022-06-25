@@ -15,8 +15,12 @@
    - #### [clean-up-template-configs](config_xxxx_view/clean-up-template-configs/)
       Tweak cleans up redundant data from configs left in database.
 
+* ### [Gallery Drag & Drop](gallery-drag-drop)
+   Allows to rearrange images by mouse, greatly simplifies sorting.
+
+
 * ### [Page-builder](page-builder/)
-   Code for the newest PageBuilder ADDON in CouchCMS V2.3 ([forum topic](https://www.couchcms.com/forum/viewtopic.php?f=5&t=13148))
+   Code for the newest PageBuilder ADDON in CouchCMS V2.3 ([**Couch Forum » PageBuilder**](https://www.couchcms.com/forum/viewtopic.php?f=5&t=13148))
 
    - #### tweak-pb-render
       Mandatory code that is recommended by 0riginal Developer.
