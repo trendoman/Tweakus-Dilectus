@@ -2,6 +2,8 @@
 
 *Latest on top*
 
+* ## [Admin-panel » Gallery Drag & Drop](anton.cms@ya.ru__admin-panel-tweaks/gallery-drag-drop)
+   Allows to rearrange images by mouse, greatly simplifies sorting.
 * ## [Modded tags &raquo; call](anton.cms@ya.ru__tags-modded/call)
    Trim output and allow mixed named/unnamed params
 * ## [Variables &raquo; k__routes](anton.cms@ya.ru__variables-new/k__routes)
@@ -14,5 +16,5 @@
 * ## [Variables &raquo; k__defined](anton.cms@ya.ru__variables-new/k__defined)
    View Couch constants.
 * ## [Admin-panel &raquo; Suave links](anton.cms@ya.ru__admin-panel-tweaks/suave-links)
-   No page reload in Admin-panel.
+   Ajax-powered template-page navigation.
 * ## [Aliases for tags](anton.cms@ya.ru__tags-aliased) ○ Addon
