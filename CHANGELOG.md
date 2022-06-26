@@ -2,6 +2,8 @@
 
 *Latest on top*
 
+* ## [Modded tags &raquo; is_ajax](anton.cms@ya.ru__tags-modded/is_ajax)
+   Can differentiate between local and outside ajax requests.
 * ## [Admin-panel » Gallery Drag & Drop](anton.cms@ya.ru__admin-panel-tweaks/gallery-drag-drop)
    Allows to rearrange images by mouse, greatly simplifies sorting.
 * ## [Modded tags &raquo; call](anton.cms@ya.ru__tags-modded/call)

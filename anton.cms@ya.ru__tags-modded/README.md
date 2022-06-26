@@ -12,6 +12,10 @@
 
    Mod allows repeated definitions without showing "Error..".
 
+* ### [`<cms:is_ajax>`](is_ajax/)
+
+   Adding new parameter: **local_only**
+
 * ### [`<cms:show>`](show/)
 
    Mod adds new parameters: **case** and **encoding**
