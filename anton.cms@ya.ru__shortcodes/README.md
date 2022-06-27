@@ -1,18 +1,19 @@
 # [Shortcodes](https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms%40ya.ru__shortcodes)
 
-If you are not familiar with shortcodes, please visit [**Documentation &raquo; Shortcodes**](#related-pages).
+### This is a collection of shortcodes for CouchCMS.
 
-In short, it is a way to inject markup to a richtext editor which would have sanitized the directly-pasted tags.
+If you are not familiar with shortcodes, please visit [**Documentation &raquo; Shortcodes**](#related-pages). In short, it is a way to inject markup to a richtext editor which would have sanitized the directly-pasted tags.
 
 Alternative to shortcodes is a [**textarea**](#related-pages) editable field with a mandatory parameter **no_xss_check**.
 
-### This is a collection of shortcodes for CouchCMS.
-
-Look for the *READMEs* in subfolders to see examples.
-
 ## Contents
 
+* ### [adsense](adsense/)
+
+   Adds 'adsense' scripts.
+
 * ### [iframe](iframe/)
+
    Embeds `<iframe>` with parameters.
 
 ## Related pages

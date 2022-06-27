@@ -2,6 +2,7 @@
 
 *Latest on top*
 
+* ## [Shortcodes &raquo; adsense](anton.cms@ya.ru__shortcodes/adsense)
 * ## [Modded tags &raquo; is_ajax](anton.cms@ya.ru__tags-modded/is_ajax)
    Can differentiate between local and outside ajax requests.
 * ## [Admin-panel » Gallery Drag & Drop](anton.cms@ya.ru__admin-panel-tweaks/gallery-drag-drop)
