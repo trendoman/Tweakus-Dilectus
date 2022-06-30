@@ -1,9 +1,9 @@
 # `<cms:show_json>`
 
-Tag **show_json** prints JSON arrays or strings beautifully aka pretty-print.
+Tag **show_json** pretty-prints JSON-formatted strings (objects, arrays). It is quite helpful for working with [**Couch Arrays**](#related-pages).
 
 ```xml
-<cms:show_json myvar />
+<cms:show_json myjson />
 ```
 
 ## Example
@@ -22,44 +22,63 @@ and see –
 }
 ```
 
-Tag's syntax reminds of tag [**cms:show**](#related-tags) and indeed is kinda shortcut to &mdash;
+Or pass an existing array e.g.
+
+```xml
+<cms:set langcodes='["de", "fr", "es", "ru"]' is_json='1' />
+<cms:show_json langcodes />
+```
+
+
+```js
+[
+   "de",
+   "fr",
+   "es",
+   "ru"
+]
+```
+
+Tag's syntax reminds of tag [**cms:show**](#related-tags) and indeed piggybacks onto &mdash;
 
 ```xml
 <cms:show myvar as_json='1' />
 ```
 
-**However**, it's striking difference is ability of **show_json** to prettify JSON output with configurable indentation. Full list of parameters with default values —
+Tag's striking feat is **configurable indentation and HTML**. Full list of parameters with their default values —
 
 ```xml
-<cms:test
-   ignore='0'
-   >
-   <cms:show_json myvar
-      as_html='1'
-      html_encode='1'
-      no_escape='1'
-      no_validate='0'
-      spaces='3'
-      monospace='1'
-      />
-</cms:test>
+<cms:show_json myvar
+   scope='parent'
+   as_html='1'
+   html_encode='1'
+   escape='0'
+   spaces='3'
+   monospace='1'
+/>
 ```
 
 Let's see each parameter closely.
 
 ## Parameters
 
-* unnamed – mandatory value placed first after tag's name, similar to 'cms:show'
-* as_html
-* html_encode
-* no_escape
-* no_validate
-* spaces
-* monospace
+* ***unnamed***
+* **scope**
+* **as_html**
+* **html_encode**
+* **escape**
+* **spaces**
+* **monospace**
+
+**First *unnamed* parameter can be array or JSON-formatted string.**
+
+### scope
+
+Takes the same values as [**cms:show**](#related-tags) would expect.
 
 ### as_html
 
-This parameter is usually omitted to invoke its default value *1*. Spaces in resulting HTML will be converted to `&nbsp;` &mdash;
+This parameter is usually omitted to invoke its default value ***1***. Spaces in resulting HTML will be converted to `&nbsp;` &mdash;
 
 ```xml
 <cms:show_json climate />
@@ -73,13 +92,15 @@ Code above equals to –
 
 ### html_encode
 
-HTML content in JSON nodes will be encoded. Default is *1*. Browsers won't try to render HTML tags destroying pretty layout if there is a `<tag>` somewhere in a node.
+Default is ***1*** — HTML content in JSON nodes will be encoded. Browser won't destroy pretty layout if there is a HTML `<tag>` somewhere in a node, trying to render it.
 
-### no_escape
+Of course, if **as_html** is ***0***, then **html_encode** will also be ***0*** and content will not be encoded.
 
-Often JSON contains \\escaped \\characters. Parameter **no_escape** (default is *1*) improves readability as it will strip extra forward slashes from the values.
+### escape
 
-**no_escape** = '0'
+Often JSON contains \\escaped \\characters. Parameter **escape** (default is ***0***) improves readability as it will strip extra forward slashes from the values.
+
+***escape = '1'***
 
 ```json
 {
@@ -88,7 +109,7 @@ Often JSON contains \\escaped \\characters. Parameter **no_escape** (default is 
 }
 ```
 
-and without parameter (same as no_escape = '1' - which is by default) &mdash;
+and without parameter (same as default ***escape = '0'***) &mdash;
 
 ```json
 {
@@ -97,47 +118,66 @@ and without parameter (same as no_escape = '1' - which is by default) &mdash;
 }
 ```
 
-**CAUTION:** While JSON standard does not require escaping of forward slashes, some nasty parsers may bulk on it.
+---
 
-### no_validate
-
-Finally, **no_validate** set to *1* (default is *0*) instructs the tag to skip validating of input JSON-string if you are 100% sure it is correct (*are you?!*). This setting will slightly improve performance in case of very large JSONs or in repeated operations.
-
-If the first parameter is a JSON-string which indeed is malformed (invalid JSON) *AND* **no_validate** is set to *1*, then there will be no error but the output will lose its beauty. Without this parameter (or set to *0*), the validation kicks in and there will be no output at all of malformed JSON.
-
-Common usage would be passing a string or an output of a function that is known to return valid JSON without validation &mdash;
-
-```xml
-<cms:show_json "<cms:call 'get-users' access_level='10' />" no_validate='1' />
-```
-
-Absent parameter **no_validate** equals to *0*. In such case, the string will be validated. Invalid JSON will be blocked form output.
+**CAUTION:** JSON standard *does not require* escaping of forward slashes, but keep an eye on 3rd-party parsers you send JSON to.
 
 ### spaces
 
-You are free to choose any number of spaces that pleases your eyes. Default is *3*.
-
-One last note. If you happen to use **show_json** but were forcefully tortured to see the output identical to that of tag 'cms:show', here is how it's done without much pain:
+You are free to choose any number of spaces that pleases your eyes. Default is ***3***.
 
 ```xml
-<cms:show climate as_json='1' />
+<cms:capture into='climate' is_json='1'>
+{
+   "Russia":{
+      "Moscow":"cold",
+      "Sochi":"warm"
+   }
+}
+</cms:capture >
+<cms:show_json climate spaces='0'/>
 ```
 
-equals to &ndash;
-
-```xml
-<cms:show_json climate as_html='0' no_escape='0' spaces='0' />
+With ***spaces = '0'*** everything becomes unindented:
+```js
+{
+"Russia":{
+"Moscow":"cold",
+"Sochi":"warm"
+}
 ```
+
+And ***spaces = '5'*** expectedly goes as:
+
+```js
+{
+     "Russia":{
+          "Moscow":"cold",
+          "Sochi":"warm"
+     }
+}
+```
+
+Do not forget that the print is actually HTML-formatted and HTML-encoded.
+
+<details><summary>Last example's actual HTML</summary>
+
+```html
+{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;Russia&quot;:{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;Moscow&quot;:&quot;cold&quot;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;Sochi&quot;:&quot;warm&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>}
+```
+</details>
 
 ### monospace
 
-Wraps output in `<pre>..</pre>` HTML tags. Default is *1*.
-
-Depends on parameter **as_html**, which is when set to *0*, automatically sets **monospace** to *0* as well.
+Wraps output in `<pre>..</pre>` HTML tags. Default is ***1***. It can not be activated without HTML-formatting i.e. when **as_html** is *0*, automatically **monospace** becomes *0* as well.
 
 ## Usage
 
-Tag **show_json** takes both &mdash; array or JSON-string as its first parameter.
+We can see the output identical to that of 'cms:show' by unsetting default values as follows –
+
+```xml
+<cms:show_json climate as_html='0' escape='1' spaces='0' />
+```
 
 Let's create an array and see our tag in action &mdash;
 
@@ -145,13 +185,11 @@ Let's create an array and see our tag in action &mdash;
 <cms:set climate = '{"Russia":{"Moscow":"cold","Sochi":"warm"}}' is_json='1' />
 <cms:test
    ignore='0'>
-
    <cms:show_json climate />
-
 </cms:test>
 ```
 
-Output is automatically formatted to 3 (default) spaces &mdash;
+Output looks pretty in browser &mdash;
 
 ```js
 {
@@ -165,6 +203,10 @@ Output is automatically formatted to 3 (default) spaces &mdash;
 ## Related tags
 
 * **show**
+
+## Related pages
+
+* [**Midware Core Concepts &raquo; Couch Arrays**](https://github.com/trendoman/Midware/tree/main/concepts/Arrays)
 
 ## Installation
 

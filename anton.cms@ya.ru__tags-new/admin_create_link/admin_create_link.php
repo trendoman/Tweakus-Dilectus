@@ -3,7 +3,6 @@
     /**
     *   TAG: <cms:admin_create_link /> - outputs 'create page' admin link
     *
-    *   @category New Tags
     *   @link   https://www.couchcms.com/forum/viewtopic.php?f=2&t=12096&p=33263#p33263
     *   @author Kamran Kashif aka KK <kksidd@couchcms.com>
     *   @date   13.06.2019
