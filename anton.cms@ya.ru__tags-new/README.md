@@ -4,6 +4,10 @@
 
 ## Contents
 
+* ### [`<cms:admin_create_link>`](admin_create_link/)
+
+   Get a link to the admin-panel "Add new page" screen.
+
 * ### [`<cms:base64_decode>`](base64_decode/)
 
    Performs base64 decoding from a string.

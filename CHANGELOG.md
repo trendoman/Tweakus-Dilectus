@@ -2,6 +2,8 @@
 
 *Latest on top*
 
+* ## [New tags &raquo; admin_create_link](anton.cms@ya.ru__tags-new/admin_create_link)
+   Get a link to the admin-panel "Add new page" screen.
 * ## [Shortcodes &raquo; adsense](anton.cms@ya.ru__shortcodes/adsense)
 * ## [Modded tags &raquo; is_ajax](anton.cms@ya.ru__tags-modded/is_ajax)
    Can differentiate between local and outside ajax requests.
