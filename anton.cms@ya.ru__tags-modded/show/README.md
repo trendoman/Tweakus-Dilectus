@@ -1,7 +1,7 @@
 # [Modded `<cms:show>`](https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms%40ya.ru__tags-modded/show/)
 
 This modification adds new parameters to [**cms:show**](#related-tags) tag &mdash;
-- **case** &mdash; with values: *upper, lower, title*
+- **case** &mdash; with values: *`upper` OR `u`, `lower` OR `l` , `title` OR `t`*.
 - **encoding** — with possible values: *UTF-8* (by default), *Windows-1251*...
 
 Parameters are optional. Tag **show** will naturally work as expected, handling JSON and variables, so if the parameters are not provided nothing changes.

@@ -86,7 +86,7 @@ This parameter is usually omitted to invoke its default value ***1***. Spaces in
 
 Code above equals to –
 
-```html
+```xml
 <cms:show_json climate as_html='1' />
 ```
 
