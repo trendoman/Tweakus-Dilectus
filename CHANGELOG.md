@@ -2,6 +2,8 @@
 
 *Latest on top*
 
+* ## [New tags &raquo; unset](anton.cms@ya.ru__tags-new/unset)
+   Remove a variable or array key.
 * ## [New tags &raquo; admin_create_link](anton.cms@ya.ru__tags-new/admin_create_link)
    Get a link to the admin-panel "Add new page" screen.
 * ## [Shortcodes &raquo; adsense](anton.cms@ya.ru__shortcodes/adsense)

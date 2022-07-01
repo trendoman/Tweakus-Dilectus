@@ -17,9 +17,9 @@
                  $params)
             );
 
-      if( trim($local_only) == '1' ){
-         if( $_SERVER['REMOTE_ADDR'] != $_SERVER['SERVER_ADDR'] )
-         $html = '0';
+      if( trim($local_only) == '1' )
+      {
+         if( $_SERVER['REMOTE_ADDR'] != $_SERVER['SERVER_ADDR'] ) { $html = '0'; }
       }
    });
 
