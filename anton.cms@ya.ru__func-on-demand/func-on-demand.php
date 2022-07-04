@@ -7,8 +7,6 @@
    *   @date   04.07.2022
    */
 
-   require_once('config.php');
-
    class Autoload {
       static $known_files = array();
       static $f_extension = FOD_FILE_EXTENSION;
@@ -352,6 +350,8 @@ MARKDOWN;
       if( 0 === $count ){ return('<h3>Error: &lt;cms:gen_func_cache&gt;: attempt unsuccessful. Couch doesn\'t know any func.</h3>'); }
       return "OK (".$count.")";
    });
+
+   require_once(__DIR__.'/config.php');
 
    if( !defined('FOD_FILE_EXTENSION') ) { die('FOD addon: Must define FOD_FILE_EXTENSION in config.php'); }
 

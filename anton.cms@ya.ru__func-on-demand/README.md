@@ -45,7 +45,7 @@ Define directory with your func files e.g.
 define( 'FOD_FUNCS_DIRECTORY', K_SITE_DIR.K_SNIPPETS_DIR.'/funcs' );
 ```
 
-Addon will look in all child subfolders of that directory till it finds the file **named exactly as the called func** e.g. "name.func". It is recommended to have a dedicated folder to store funcs, so the lookup happens as fast as possible. Usually it happens within 1/100 of a second or faster. Check out the [**Advanced Configuration**](CONFIG.md) page to see how customize addon further for your *very special* needs.
+Addon will look in all child subfolders of that directory till it finds the file **named exactly as the called func** e.g. "name.func". It is recommended to have a dedicated folder to store funcs, so the lookup happens as fast as possible. Usually it happens within 1/100th of a second or faster. Check out the [**Advanced Configuration**](CONFIG.md) page to see how customize addon further for your *very special* needs.
 
 ## Related tags
 
