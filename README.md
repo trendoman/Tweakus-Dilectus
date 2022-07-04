@@ -8,11 +8,15 @@
 
 Customize sidebar, list-view, form-view. Tweak display of editable fields, auto-name pages. Enjoy smoother navigation and many more!
 
+## [Addon » Func-on-demand](https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms@ya.ru__func-on-demand)
+
+Autoloading and caching for &lt;cms:func&gt; snippets.
+
 ## [**Shortcodes**](anton.cms%40ya.ru__shortcodes/)
 
 Many useful shortcodes to embed tags into richtext editor.
 
-## [Aliases for tags](anton.cms%40ya.ru__tags-aliased/)
+## [Addon » Aliases for tags](anton.cms%40ya.ru__tags-aliased/)
 
 Tired of forgetting complex tag names? Use your favorite shortcuts with this addon.
 

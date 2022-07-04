@@ -2,6 +2,8 @@
 
 *Latest on top*
 
+* ## [**Addon "Func-on-demand"**](https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms@ya.ru__func-on-demand)
+   Autoloading and caching of 'func' snippets.
 * ## [New tags &raquo; unset](anton.cms@ya.ru__tags-new/unset)
    Remove a variable or array key.
 * ## [New tags &raquo; admin_create_link](anton.cms@ya.ru__tags-new/admin_create_link)
