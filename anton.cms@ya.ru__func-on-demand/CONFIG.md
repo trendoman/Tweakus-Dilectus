@@ -101,7 +101,7 @@ Such cache with funcs can be created by placing a tag on a page once:
 
 Tag is self-closed, doesn't take any parameters, doesn't search for funcs in directories. It will take already registered funcs i.e. those known to Couch (loaded with this addon, embedded or placed directly in page), crawl them and dump their code directly from Couch to a special file. Parsed state of funcs is the same as to what was said in the [**FOD_USE_COUCHCACHE**](#fod_use_couchcache) section.
 
-Reload the page with tag and it will be executed. When done, it will display "OK (X)", where 'X' is the number of funcs. Check the file 'funcs.dat.md' in the addon's folder. When you have generated the file with the tag **cms:gen_func_cache** and checked the file exists with all registered funcs, set the setting to ***1***.
+Reload the page with tag and it will be executed. When done, it will display "OK (X)", where 'X' is the number of funcs. Check the file 'funcs.dat.md' in the addon's folder. It will overwrite the[ **demo file**](https://github.com/trendoman/Tweakus-Dilectus/blob/main/anton.cms%40ya.ru__func-on-demand/funcs.dat.md) shipped with addon. When you have generated the file with the tag **cms:gen_func_cache** and checked the file exists with all registered funcs, set the setting to ***1***.
 
 ```php
 define( 'FOD_CACHE_FILE_ON', 1 );
