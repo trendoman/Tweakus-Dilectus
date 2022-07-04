@@ -37,24 +37,32 @@
 
          global $FUNCS;
          $Class = get_called_class();
-         $FUNCS->add_event_listener( 'alter_tag_call_execute', function($tag_name, $params) use ($FUNCS, $Class)
+
+         $FUNCS->add_event_listener( 'alter_tag_call_execute', function($tag_name, $params, $node) use ($FUNCS, $Class)
          {
             $func_name = trim( $params[0]['rhs'] );
             if( !$func_name || array_key_exists($func_name, $FUNCS->funcs) ){ return $stop_propagation = false; }
 
+            $msg = '';
             $loaded = $Class::find_and_read($func_name);
             if( !$loaded )
             {
-               $Class::file_not_found($func_name.'.'.$Class::$f_extension);
-               return $stop_propagation = false;
+               $msg = $Class::file_not_found($func_name.'.'.$Class::$f_extension);
             }
-            if( !array_key_exists($func_name, $FUNCS->funcs) )
+            elseif( !array_key_exists($func_name, $FUNCS->funcs) )
             {
-               $Class::func_not_available($func_name, $loaded);
+               $msg = $Class::func_not_available($func_name, $loaded);
             }
+
+            if( trim($msg) != '' ){ $node->fod_addon_err_msg = $msg; }
 
             return $stop_propagation = false;
          }, 1000); //higher priority
+
+         $FUNCS->add_event_listener( 'tag_call_executed', function($tag_name, $params, $node, $html)
+         {
+            if( isset($node->fod_addon_err_msg) ){ $html .= "\r\n<hr>Addon F.O.D.: ".$node->fod_addon_err_msg."<hr>"; }
+         });
 
          define( 'FOD_ADD_LISTENER_DONE', 1 );
       }
@@ -103,16 +111,14 @@
 
       static function file_not_found( /*string*/ $func_name )
       {
-         echo("\r\nERROR: Could not locate func [$func_name]\r\n");
-         return;
+         return("ERROR: Could not locate file \"$func_name\"");
       }
 
       static function func_not_available( /*string*/ $func_name, $path )
       {
          $path = str_replace('\\', '/', $path);
          $path = str_replace(K_SITE_DIR, '', $path);
-         echo("\r\n".'ERROR: File "'.$path.'" does not contain a func "'.$func_name.'"'."\r\n");
-         return;
+         return('ERROR: File "'.$path.'" does not contain a func "'.$func_name.'"');
       }
 
       static function read( \SplFileInfo $splFile )
