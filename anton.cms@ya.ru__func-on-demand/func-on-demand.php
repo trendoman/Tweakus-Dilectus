@@ -38,7 +38,7 @@
          global $FUNCS;
          $Class = get_called_class();
 
-         $FUNCS->add_event_listener( 'alter_tag_call_execute', function($tag_name, $params, $node) use ($FUNCS, $Class)
+         $FUNCS->add_event_listener( 'alter_tag_call_execute', function($tag_name, $params, &$node) use ($FUNCS, $Class)
          {
             $func_name = trim( $params[0]['rhs'] );
             if( !$func_name || array_key_exists($func_name, $FUNCS->funcs) ){ return $stop_propagation = false; }
@@ -59,7 +59,7 @@
             return $stop_propagation = false;
          }, 1000); //higher priority
 
-         $FUNCS->add_event_listener( 'tag_call_executed', function($tag_name, $params, $node, $html)
+         $FUNCS->add_event_listener( 'tag_call_executed', function($tag_name, $params, $node, &$html)
          {
             if( isset($node->fod_addon_err_msg) ){ $html .= "\r\n<hr>Addon F.O.D.: ".$node->fod_addon_err_msg."<hr>"; }
          });
@@ -73,6 +73,7 @@
          $Iterator = new \RecursiveIteratorIterator( $Iterator, \RecursiveIteratorIterator::LEAVES_ONLY );
          $Iterator = new \NoRewindIterator($Iterator);
          static::get_current_iterator()->append($Iterator);
+         $Iterator = null;
       }
 
       static function get_current_iterator()
@@ -153,6 +154,7 @@
          $Iterator = new \NoRewindIterator($Iterator);
          $Iterator->getInnerIterator()->rewind();
          static::get_current_iterator()->append($Iterator);
+         $Iterator = null;
       }
    } // end Class
 
