@@ -9,17 +9,16 @@
    // Mind the slashes! Constant K_SITE_DIR has a trailing slash, K_SNIPPETS_DIR does not.
    define( 'FOD_FUNCS_DIRECTORY', K_SITE_DIR.K_SNIPPETS_DIR.'/funcs' );
 
-
    ///////////ADVANCED CONFIGURATION/////////////////////////////////
 
    // 1.
+   // If necessary, change the extension for the files with funcs
+   define( 'FOD_FILE_EXTENSION', 'func' );
+
+   // 2.
    // If necessary, add more directories to scan. Mind the slashes!
    // Uncomment the line below and duplicate it if more dirs are needed.
    //\trendoman\CmsFu\AutoloadFiltered::add_dir( K_SITE_DIR.'#CmsFu' );
-
-   // 2.
-   // If necessary, change the extension for the files with funcs
-   define( 'FOD_FILE_EXTENSION', 'func' );
 
    // 3.
    // Addon will follow Couch's setting K_CACHE_OPCODES and K_CACHE_SETTINGS
@@ -41,7 +40,7 @@
    // Name of the single cache file.
    // Must be uncommented with the previous setting.
    define( 'FOD_CACHE_FILE', 'funcs.dat.md' );
-   
+
    /*
    // ~~~~~~~~~~~~~
    // Credits
