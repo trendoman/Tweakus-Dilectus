@@ -2,6 +2,8 @@
 
 *Latest on top*
 
+* ## [New tags &raquo; delete_file](anton.cms@ya.ru__tags-new/delete_file)
+   Plus can delete PHP's error_log.
 * ## [**Addon "Func-on-demand"**](https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms@ya.ru__func-on-demand)
    Autoloading and caching of 'func' snippets.
 * ## [New tags &raquo; unset](anton.cms@ya.ru__tags-new/unset)

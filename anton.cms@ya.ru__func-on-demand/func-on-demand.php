@@ -25,6 +25,7 @@
          if(  false === $splFile->getRealPath() || !$splFile->isReadable() || !$splFile->isDir() )
          {
             // return false;
+            error_log( "ERROR: \"func-on-demand\": Not readable path — \"" . $path . '"');
             die( "ERROR: \"func-on-demand\": Not readable path — \"" . $path . '"');
          }
 
@@ -126,7 +127,11 @@
       {
          $filepath = $splFile->getRealPath();
          $html = @file_get_contents( $filepath );
-         if( false === $html ){ die('Error reading file: ' . htmlspecialchars( $filepath )); }
+         if( false === $html )
+         {
+            error_log('Error reading file: ' . htmlspecialchars( $filepath )); 
+            die('Error reading file: ' . htmlspecialchars( $filepath ));
+         }
 
          $html = preg_replace( $pattern='/<cms:ignore\s*>[\s\S]*?<\/cms:ignore\s*>/', $replacement='', trim($html) );
          if( false === strpos($html, '<cms:func') ) return $filepath;

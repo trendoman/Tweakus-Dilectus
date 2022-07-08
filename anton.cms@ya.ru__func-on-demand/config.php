@@ -16,6 +16,7 @@
    define( 'FOD_FILE_EXTENSION', 'func' );
 
    // 2.
+   
    // If necessary, add more directories to scan. Mind the slashes!
    // Uncomment the line below and duplicate it if more dirs are needed.
    //\trendoman\CmsFu\AutoloadFiltered::add_dir( K_SITE_DIR.'#CmsFu' );
