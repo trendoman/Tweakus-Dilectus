@@ -7,7 +7,10 @@
    *   @date   04.07.2022
    */
 
+   require_once(__DIR__.'/config.php');
+
    class Autoload {
+
       static $known_files = array();
       static $f_extension = FOD_FILE_EXTENSION;
 
@@ -74,7 +77,6 @@
          $Iterator = new \RecursiveIteratorIterator( $Iterator, \RecursiveIteratorIterator::LEAVES_ONLY );
          $Iterator = new \NoRewindIterator($Iterator);
          static::get_current_iterator()->append($Iterator);
-         $Iterator = null;
       }
 
       static function get_current_iterator()
@@ -91,9 +93,7 @@
          {
             return static::read( static::$known_files[$func_name] );
          }
-
          $Iterator = static::get_current_iterator();
-
          foreach ($Iterator as $splFile)
          {
             $_ext = strrchr($splFile->getFilename(),'.');
@@ -129,10 +129,9 @@
          $html = @file_get_contents( $filepath );
          if( false === $html )
          {
-            error_log('Error reading file: ' . htmlspecialchars( $filepath )); 
+            error_log('Error reading file: ' . htmlspecialchars( $filepath ));
             die('Error reading file: ' . htmlspecialchars( $filepath ));
          }
-
          $html = preg_replace( $pattern='/<cms:ignore\s*>[\s\S]*?<\/cms:ignore\s*>/', $replacement='', trim($html) );
          if( false === strpos($html, '<cms:func') ) return $filepath;
 
@@ -153,13 +152,13 @@
 
       static function make_dir_traversable( /*string*/ $dir)
       {
+
          $Iterator = new \RecursiveDirectoryIterator( $dir, \FilesystemIterator::SKIP_DOTS );
          $ExFilter = new \trendoman\CmsFu\SimpleExtensionFilter($Iterator);
          $Iterator = new \RecursiveIteratorIterator( $ExFilter, \RecursiveIteratorIterator::LEAVES_ONLY );
          $Iterator = new \NoRewindIterator($Iterator);
          $Iterator->getInnerIterator()->rewind();
          static::get_current_iterator()->append($Iterator);
-         $Iterator = null;
       }
    } // end Class
 
@@ -329,6 +328,7 @@ MARKDOWN;
          return('<h2>Error: "<cms:gen_func_list>": full disk path expected starting with "'.K_SITE_DIR.'"</h2>');
       }
 
+
       $ClassName::add_dir($path);
       if( false === $ClassName::find_and_read('-') )
       {
@@ -364,16 +364,8 @@ MARKDOWN;
       return "OK (".$count.")";
    });
 
-   require_once(__DIR__.'/config.php');
 
    if( !defined('FOD_FILE_EXTENSION') ) { die('FOD addon: Must define FOD_FILE_EXTENSION in config.php'); }
-
-   if( !defined('FOD_FUNCS_DIRECTORY') ) {
-      die('FOD addon: Must define FOD_FUNCS_DIRECTORY in config.php');
-   }
-   else {
-      \trendoman\CmsFu\AutoloadFiltered::add_dir( FOD_FUNCS_DIRECTORY );
-   }
 
    if( defined('FOD_PRELOAD_PATHS') && FOD_PRELOAD_PATHS == 1 )
    {
