@@ -1,4 +1,4 @@
-# [Aliases for Tags](https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms%40ya.ru__tags-aliased)
+# [Addon "Aliases for tags"](https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms%40ya.ru__tags-aliased)
 
 Addon allows to use a more comfortable name for a tag.
 

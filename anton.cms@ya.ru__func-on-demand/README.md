@@ -1,4 +1,4 @@
-# [Func-on-demand](https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms@ya.ru__func-on-demand)
+# [Addon "Func-on-demand"](https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms@ya.ru__func-on-demand)
 
 ## Intro
 

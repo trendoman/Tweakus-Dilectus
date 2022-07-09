@@ -1,6 +1,10 @@
 # [Tweakus Dilectus](https://github.com/trendoman/Tweakus-Dilectus)
 
-#### Powerful tweaks and addons for CouchCMS.
+#### Bookmark [CHANGELOG.md](https://github.com/trendoman/Tweakus-Dilectus/blob/main/CHANGELOG.md) which is always updated with new addings.
+
+---
+
+### Powerful tweaks and addons for CouchCMS.
 
 > First time? Visit [**CouchCMS &raquo; website**](http://couchcms.com/) to explore this TIME-TESTED and SECURE CMS. It's perfect for designers and is open source! See the [**CouchCMS &raquo; GitHub**](https://github.com/CouchCMS/CouchCMS) repository.
 

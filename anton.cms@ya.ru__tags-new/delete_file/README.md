@@ -34,6 +34,10 @@ If a special value ***@php*** passed, tag will remove PHP's errors log.
 
 Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
 
+## Related tags
+
+- [**write**](https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms%40ya.ru__tags-new/write)
+
 ## Related pages
 
 - [**Aliases for tags**](https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms%40ya.ru__tags-aliased)

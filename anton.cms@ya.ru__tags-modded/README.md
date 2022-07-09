@@ -8,6 +8,10 @@
 
    Mod automatically trims the output and allows mixed named/unnamed parameters.
 
+* ### [`<cms:each>`](each/)
+
+   Original tag expanded with 4 more parameters (***reverse, count_only, skip_empty, limit***).
+
 * ### [`<cms:func>`](func/)
 
    Mod allows repeated definitions without showing "Error..".
@@ -19,7 +23,6 @@
 * ### [`<cms:show>`](show/)
 
    Mod adds new parameters: **case** and **encoding**
-
 
 ## Installation
 
