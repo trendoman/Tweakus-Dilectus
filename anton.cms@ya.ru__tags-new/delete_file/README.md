@@ -6,6 +6,8 @@ Deletes a file. Path is relevant to website directory.
 <cms:delete_file 'log.txt' />
 ```
 
+***ONLY LOGGED-IN ADMINISTRATORS CAN DELETE FILES.***
+
 A special parameter allows to remove PHP error log defined in the ini-file. PHP will automatically re-create a new empty logfile.
 
 A shorter tag's name e.g. **&lt;cms:del&gt;** is possible via [**Aliases for tags**](#related-pages) addon

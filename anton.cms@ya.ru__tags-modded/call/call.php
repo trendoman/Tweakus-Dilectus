@@ -3,6 +3,7 @@
    /**
    *   Allow mixed named, unnamed params
    *   Trim output
+   *
    *   @author @trendoman <tony.smirnov@gmail.com>
    *   @date   24.06.2022
    */

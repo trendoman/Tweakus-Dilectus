@@ -2,6 +2,8 @@
 
 *Latest on top*
 
+* ## [New tags &raquo; close_session](anton.cms@ya.ru__tags-new/close_session)
+   Prevent hangs in multiple same-session same-server connections.
 * ## [Modded tags &raquo; each](anton.cms@ya.ru__tags-modded/each)
    Original tag expanded with 4 more parameters (***reverse, count_only, skip_empty, limit***).
 * ## [New tags &raquo; delete_file](anton.cms@ya.ru__tags-new/delete_file)

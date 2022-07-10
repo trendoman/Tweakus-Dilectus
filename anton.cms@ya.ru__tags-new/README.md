@@ -16,6 +16,10 @@
 
    Performs base64 encoding.
 
+* ### [`<cms:close_session>`](close_session/)
+
+    Un-hangs other tabs with pages opened within the same session on the same server.
+
 * ### [`<cms:delete_file>`](delete_file/)
 
     Delete a file or, via special param, PHP's error_log.

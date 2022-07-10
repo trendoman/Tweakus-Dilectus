@@ -325,9 +325,8 @@ MARKDOWN;
 
       if( $path == '' || false===strpos($path, K_SITE_DIR) )
       {
-         return('<h2>Error: "<cms:gen_func_list>": full disk path expected starting with "'.K_SITE_DIR.'"</h2>');
+         return('<h2>Error: "&lt;cms:gen_func_array&gt;": full disk path expected starting with "'.K_SITE_DIR.'". Try &lt;cms:gen_func_array path=k_site_path /&gt;</h2>');
       }
-
 
       $ClassName::add_dir($path);
       if( false === $ClassName::find_and_read('-') )

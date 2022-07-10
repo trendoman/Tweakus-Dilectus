@@ -35,7 +35,7 @@ require_once( K_COUCH_DIR.'addons/anton.cms@ya.ru__func-on-demand/func-on-demand
 
 ## Configuration
 
-Open `func-on-demand/config.php` and find following setting –
+Open `func-on-demand/config.php` (rename from `example.config.php`) and find following setting –
 
 ### FOD_FUNCS_DIRECTORY
 
