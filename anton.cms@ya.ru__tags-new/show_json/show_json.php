@@ -16,11 +16,12 @@
 
         /* tag cms:show handles scope and arrays */
         $params[] = array('lhs'=>'as_json', 'op'=>'=', 'rhs'=>'1');
-        $json = $TAGS->show( $params, $node );
-        if( !$json ) return;
+        if( !$json = $TAGS->show( $params, $node ) ) return;
+        array_pop($params);
 
         extract( $FUNCS->get_named_vars(
                     array(
+                          'json'=>'',
                           'as_html'=>'1',     /* show json as HTML-markup for best browser-view */
                           'html_encode'=>'1', /* HTML content in JSON nodes will be encoded, but pretty-markup will be not (if as_html=1)*/
                           'escape'=>'0',      /* strip slashes for best readability (ATTN! Some parsers do not like this valid JSON) */
@@ -35,7 +36,6 @@
         $escape = ( $escape==1 ) ? 1 : 0;
         $spaces = intval($spaces);
         $monospace = ( $monospace==0 ) ? 0 : 1;
-
         if( !$escape ) $json = stripslashes($json);
         if( $as_html && $html_encode ) $json = htmlspecialchars( $json, ENT_QUOTES, K_CHARSET );
 
