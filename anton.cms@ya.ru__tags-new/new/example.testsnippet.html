@@ -1,0 +1,227 @@
+<cms:test ignore='0'>
+
+  <cms:nl2br>
+
+
+Address
+
+    <cms:new 'cityPrefix' />
+    <cms:new 'secondaryAddress' />
+    <cms:new 'state' />
+    <cms:new 'stateAbbr' />
+    <cms:new 'citySuffix' />
+    <cms:new 'streetSuffix' />
+    <cms:new 'buildingNumber' />
+    <cms:new 'city' />
+    <cms:new 'streetName' />
+    <cms:new 'streetAddress' />
+    <cms:new 'postcode' />
+    <cms:new 'address' />
+    <cms:new 'country' />
+    <cms:new 'latitude' min='-90' max='90' />
+    <cms:new 'longitude' min='-180' max='180' />
+    <cms:new 'localCoordinates' />
+
+Barcode
+
+    <cms:new 'ean13' />
+    <cms:new 'ean8' />
+    <cms:new 'isbn10' />
+    <cms:new 'isbn13' />
+
+Base
+
+    <cms:new 'randomDigit' />
+    <cms:new 'randomDigitNotNull' />
+    <cms:new 'randomDigitNot' except='5' />
+    <cms:new 'randomNumber' nbDigits='' strict='' />
+    <cms:new 'randomFloat' nbMaxDecimals='' min='0' max='' />
+    <cms:new 'numberBetween' int1='0' int2='2147483647' />
+    <cms:new 'passthrough' value='' />
+    <cms:new 'randomLetter' />
+    <cms:new 'randomAscii' />
+    <cms:new 'randomElements' array='["a","b","c"]' count='1' allowDuplicates='' />
+    <cms:new 'randomElement' array='["a","b","c"]' />
+    <cms:new 'randomKey' array='[]' />
+    <cms:new 'shuffle' arg='' />
+    <cms:new 'shuffleArray' array='[]' />
+    <cms:new 'shuffleString' string='' encoding='UTF-8' />
+    <cms:new 'numerify' string='###' />
+    <cms:new 'lexify' string='????' />
+    <cms:new 'bothify' string='## ??' />
+    <cms:new 'asciify' string='****' />
+    <cms:new 'regexify' regex='' />
+    <cms:new 'toLower' string='' />
+    <cms:new 'toUpper' string='' />
+
+Biased
+
+    <cms:new 'biasedNumberBetween' min='0' max='100' function='sqrt' />
+
+Color
+
+    <cms:new 'hexColor' />
+    <cms:new 'safeHexColor' />
+    <cms:new 'rgbColorAsArray' />
+    <cms:new 'rgbColor' />
+    <cms:new 'rgbCssColor' />
+    <cms:new 'rgbaCssColor' />
+    <cms:new 'safeColorName' />
+    <cms:new 'colorName' />
+    <cms:new 'hslColor' />
+    <cms:new 'hslColorAsArray' />
+
+Company
+
+    <cms:new 'catchPhrase' />
+    <cms:new 'bs' />
+    <cms:new 'ein' />
+    <cms:new 'company' />
+    <cms:new 'companySuffix' />
+    <cms:new 'jobTitle' />
+
+DateTime
+
+    <cms:new 'unixTime' max='now' />
+    <cms:new 'dateTime' max='now' timezone='' />
+    <cms:new 'dateTimeAD' max='now' timezone='' />
+    <cms:new 'iso8601' max='now' />
+    <cms:new 'date' format='Y-m-d' max='now' />
+    <cms:new 'time' format='H:i:s' max='now' />
+    <cms:new 'dateTimeBetween' startDate='-30 years' endDate='now' timezone='' />
+    <cms:new 'dateTimeInInterval' date='-30 years' interval='+5 days' timezone='' />
+    <cms:new 'dateTimeThisCentury' max='now' timezone='' />
+    <cms:new 'dateTimeThisDecade' max='now' timezone='' />
+    <cms:new 'dateTimeThisYear' max='now' timezone='' />
+    <cms:new 'dateTimeThisMonth' max='now' timezone='' />
+    <cms:new 'amPm' max='now' />
+    <cms:new 'dayOfMonth' max='now' />
+    <cms:new 'dayOfWeek' max='now' />
+    <cms:new 'month' max='now' />
+    <cms:new 'monthName' max='now' />
+    <cms:new 'year' max='now' />
+    <cms:new 'century' />
+    <cms:new 'timezone' />
+    <cms:new 'setDefaultTimezone' timezone='' />
+    <cms:new 'getDefaultTimezone' />
+
+File
+
+    <cms:new 'mimeType' />
+    <cms:new 'fileExtension' />
+    <cms:ignore>
+    <cms:new 'file' sourceDirectory='/tmp' targetDirectory='/tmp' fullPath='1' />
+    </cms:ignore>
+
+HtmlLorem
+
+    <cms:new 'randomHtml' maxDepth='4' maxWidth='4' />
+
+Image
+
+    <cms:new 'imageUrl' width='640' height='480' category='' randomize='1' word='' gray='' />
+    <cms:ignore>
+    <cms:new 'image' dir='' width='640' height='480' category='' fullPath='1' randomize='1' word='' gray='' />
+    </cms:ignore>
+
+Internet
+
+    <cms:new 'email' />
+    <cms:new 'safeEmail' />
+    <cms:new 'freeEmail' />
+    <cms:new 'companyEmail' />
+    <cms:new 'freeEmailDomain' />
+    <cms:new 'safeEmailDomain' />
+    <cms:new 'userName' />
+    <cms:new 'password' minLength='6' maxLength='20' />
+    <cms:new 'domainName' />
+    <cms:new 'domainWord' />
+    <cms:new 'tld' />
+    <cms:new 'url' />
+    <cms:new 'slug' nbWords='6' variableNbWords='1' />
+    <cms:new 'ipv4' />
+    <cms:new 'ipv6' />
+    <cms:new 'localIpv4' />
+    <cms:new 'macAddress' />
+
+Lorem
+
+    <cms:new 'word' />
+    <cms:new 'words' nb='3' asText='' />
+    <cms:new 'sentence' nbWords='6' variableNbWords='1' />
+    <cms:new 'sentences' nb='3' asText='' />
+    <cms:new 'paragraph' nbSentences='3' variableNbSentences='1' />
+    <cms:new 'paragraphs' nb='3' asText='' />
+    <cms:new 'text' maxNbChars='200' />
+
+Miscellaneous
+
+    <cms:new 'boolean' chanceOfGettingTrue='50' />
+    <cms:new 'md5' />
+    <cms:new 'sha1' />
+    <cms:new 'sha256' />
+    <cms:new 'locale' />
+    <cms:new 'countryCode' />
+    <cms:new 'countryISOAlpha3' />
+    <cms:new 'languageCode' />
+    <cms:new 'currencyCode' />
+    <cms:new 'emoji' />
+
+Payment
+
+    <cms:new 'bankAccountNumber' />
+    <cms:new 'bankRoutingNumber' />
+    <cms:new 'creditCardType' />
+    <cms:new 'creditCardNumber' type='' formatted='' separator='-' />
+    <cms:new 'creditCardExpirationDate' valid='1' />
+    <cms:new 'creditCardExpirationDateString' valid='1' expirationDateFormat='' />
+    <cms:new 'creditCardDetails' valid='1' />
+    <cms:new 'iban' countryCode='' prefix='' length='' />
+    <cms:new 'swiftBicNumber' />
+
+Person
+
+    <cms:new 'suffix' />
+    <cms:new 'ssn' />
+    <cms:new 'name' gender='' />
+    <cms:new 'firstName' gender='' />
+    <cms:new 'firstNameMale' />
+    <cms:new 'firstNameFemale' />
+    <cms:new 'lastName' />
+    <cms:new 'title' gender='' />
+    <cms:new 'titleMale' />
+    <cms:new 'titleFemale' />
+
+PhoneNumber
+
+    <cms:new 'tollFreeAreaCode' />
+    <cms:new 'tollFreePhoneNumber' />
+    <cms:new 'areaCode' />
+    <cms:new 'exchangeCode' />
+    <cms:new 'phoneNumber' />
+    <cms:new 'e164PhoneNumber' />
+    <cms:new 'imei' />
+
+Text
+
+    <cms:new 'realText' maxNbChars='200' indexSize='2' />
+
+UserAgent
+
+    <cms:new 'macProcessor' />
+    <cms:new 'linuxProcessor' />
+    <cms:new 'userAgent' />
+    <cms:new 'chrome' />
+    <cms:new 'firefox' />
+    <cms:new 'safari' />
+    <cms:new 'opera' />
+    <cms:new 'internetExplorer' />
+    <cms:new 'windowsPlatformToken' />
+    <cms:new 'macPlatformToken' />
+    <cms:new 'linuxPlatformToken' />
+
+
+
+  </cms:nl2br>
+
+</cms:test>

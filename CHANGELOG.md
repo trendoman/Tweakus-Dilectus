@@ -2,6 +2,8 @@
 
 *Latest on top*
 
+* ## [New tags &raquo; new](anton.cms@ya.ru__tags-new/new)
+   Generate random data for all kinds of fields.
 * ## [New tags &raquo; close_session](anton.cms@ya.ru__tags-new/close_session)
    Prevent hangs in multiple same-session same-server connections.
 * ## [Modded tags &raquo; each](anton.cms@ya.ru__tags-modded/each)

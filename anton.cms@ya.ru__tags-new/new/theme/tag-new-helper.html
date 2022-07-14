@@ -1,0 +1,132 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+    #addon-genfakes-wrapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+    #addon-genfakes-wrapper .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(500px,1fr));
+        grid-auto-rows: 10px;
+        grid-gap: 10px;
+    }
+    #addon-genfakes-wrapper .grid .item { padding: 20px; }
+    #addon-genfakes-wrapper ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    #addon-genfakes-wrapper ul li {
+        font-family: monospace;
+    }
+
+</style>
+
+<section id="addon-genfakes-wrapper">
+
+    <h1>Tag <b>&lt;cms:new /&gt;</b> — freedom of random values!</h1>
+
+    <p>Visit <a href='https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms%40ya.ru__tags-new/new/README.md#formatters'>README#formatters</a> for type hints and examples.
+
+    <p>Tag is based on <a href='https://github.com/fzaninotto/Faker'>@fzaninotto's repository</a>.
+
+    <div class="grid">
+
+        <cms:each k_render_vars.formatters key='category' as='list'>
+
+        <div class="item">
+            <div class="content">
+                <h2><cms:show category /></h2>
+                <ul>
+                    <cms:each list key='formatter' as='params'>
+                    <li>&lt;cms:new '<cms:show formatter />' <cms:show params /> /&gt;</li>
+                    </cms:each>
+                </ul>
+            </div>
+        </div>
+
+        </cms:each>
+
+    </div>
+
+    <h2>Modifiers</h2>
+
+    <p>Each format supports several modifiers</p>
+
+    <hr>
+
+    <div class="grid">
+        <div class="item">
+            <div class="content">
+            <h3>Optional:</h3>
+            <p><b><code>optional='1'</code></b> &mdash; default chance is 50%.</p>
+            <p><b><code>optional='80%'</code></b> &mdash; you set the chance as percentage.</p>
+            <p><b><code>optional='20%' default='abc'</code></b> &mdash; specify the default value to return.</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="content">
+            <h3>Unique:</h3>
+            <p><b><code>unique='1'</code></b> &mdash; forces tag to return unique values.</p>
+            <p><b><code>unique='1' reset='1'</code></b> &mdash; can reset the unique modifier for all providers by passing "true" or "1".</p>
+            <p><b><code>optional='20%' default='abc'</code></b> &mdash; specify the default value to return.</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="content">
+            <h3>Validator:</h3>
+            <p><b><code>validator=evenValidator</code></b> &mdash; only accept valid values according to the passed validator function.
+                <br>Example, where list will have 10 elements, with only even numbers from "my_array".
+            </p>
+                <pre>
+&lt;cms:func _into='evenValidator'&gt;
+    &lt;cms:if "&lt;cms:mod new_value '2' /&gt;"&gt;0&lt;cms:else /&gt;1&lt;/cms:if&gt;
+&lt;/cms:func&gt;
+
+&lt;ol&gt;
+&lt;cms:set my_array = '["1", "3", "2", "4", "9"]' is_json='1' /&gt;
+&lt;cms:repeat '10'&gt;
+    &lt;li&gt;&lt;cms:new 'randomElement' array=my_array validator=evenValidator /&gt;&lt;/li&gt;
+&lt;/cms:repeat&gt;
+&lt;/ol&gt;
+                </pre>
+            </div>
+        </div>
+        <div class="item">
+            <div class="content">
+            <h3>Locale:</h3>
+            <p><b><code>locale='en_US'</code></b> &mdash; this is default locale which can be omitted.</p>
+            <p><b><code>&lt;cms:new 'city' locale='ru_RU' /&gt;</code></b> &mdash; this will print a random Russian city.</p>
+            <p><strong>74</strong> locales are available and more are coming!</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="content">
+            <h3>Seed:</h3>
+            <p><b><code>&lt;cms:new seed='12345' /&gt;</code></b> &mdash; calling the same script twice with the same seed produces the same results.</p>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+<script>
+    function resizeGridItem(item){
+       grid = document.getElementsByClassName("grid")[0];
+       rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+       rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+       rowSpan = Math.ceil((item.querySelector('.content').getBoundingClientRect().height+rowGap)/(rowHeight+rowGap));
+       item.style.gridRowEnd = "span "+rowSpan;
+    }
+
+    function resizeAllGridItems(){
+       allItems = document.getElementsByClassName("item");
+       for(x=0;x<allItems.length;x++){
+          resizeGridItem(allItems[x]);
+       }
+    }
+
+    window.onload = resizeAllGridItems();
+
+    window.addEventListener("resize", resizeAllGridItems);
+</script>

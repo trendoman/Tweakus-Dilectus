@@ -32,6 +32,10 @@
 
     Calculates MD5 hash.
 
+* ### [`<cms:new>`](new/)
+
+    Generate random data for all kinds of fields.
+
 * ### [`<cms:show_json>`](show_json/)
 
     Tag **show_json** beautifully prints JSON arrays or strings.
