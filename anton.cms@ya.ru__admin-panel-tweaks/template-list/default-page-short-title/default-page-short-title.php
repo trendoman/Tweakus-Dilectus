@@ -16,7 +16,7 @@
         $is_master = $arr_insert['is_master'];
         $title = $arr_insert['page_title'];
         $name = $arr_insert['page_name'];
-        $unwelcomed_title_str = '* PLEASE CHANGE THIS TITLE *';
+        $unwelcomed_title_str = ' * PLEASE CHANGE THIS TITLE *';
         $unwelcomed_name_str = '-please-change-this-title';
 
         if( $is_master && strpos( $title, $unwelcomed_title_str )){
