@@ -21,7 +21,7 @@
 
         extract( $FUNCS->get_named_vars(
                     array(
-                          'json'=>'',
+                          'value'=>'',
                           'as_html'=>'1',     /* show json as HTML-markup for best browser-view */
                           'html_encode'=>'1', /* HTML content in JSON nodes will be encoded, but pretty-markup will be not (if as_html=1)*/
                           'escape'=>'0',      /* strip slashes for best readability (ATTN! Some parsers do not like this valid JSON) */
