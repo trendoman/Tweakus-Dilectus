@@ -21,7 +21,7 @@
            ,  'K_MAX_CACHE_AGE' => K_MAX_CACHE_AGE
            ,  'K_CACHE_PURGE_INTERVAL' => K_CACHE_PURGE_INTERVAL
            ,  'K_SITE_OFFLINE' => K_SITE_OFFLINE
-           ,  'K_ADMIN' => ( K_ADMIN == 1 ) ? 1 : 0
+           ,  'K_ADMIN' => defined('K_ADMIN') ? 1 : 0
            ,  'K_ADMIN_LANG' => K_ADMIN_LANG
            ,  'K_HTTPS' => K_HTTPS
            ,  'K_IS_MY_TEST_MACHINE' => K_IS_MY_TEST_MACHINE
@@ -47,11 +47,11 @@
            ,  'K_TBL_TEMPLATES' => K_TBL_TEMPLATES
            ,  'K_TBL_USER_LEVELS' => K_TBL_USER_LEVELS
            ,  'K_TBL_USERS' => K_TBL_USERS
-           ,  'K_TBL_VOTES_CALC' => defined(K_TBL_VOTES_CALC) ? K_TBL_VOTES_CALC : ""
-           ,  'K_TBL_VOTES_RAW' => defined(K_TBL_VOTES_RAW) ? K_TBL_VOTES_RAW : ""
-           ,  'K_VOTE_VERSION' => defined(K_VOTE_VERSION) ? K_VOTE_VERSION : ""
-           ,  'K_VOTE_WINDOW_ANON' => defined(K_VOTE_WINDOW_ANON) ? K_VOTE_WINDOW_ANON : ""
-           ,  'K_VOTE_WINDOW_MEMBER' => defined(K_VOTE_WINDOW_MEMBER) ? K_VOTE_WINDOW_MEMBER : ""
+           ,  'K_TBL_VOTES_CALC' => defined('K_TBL_VOTES_CALC') ? K_TBL_VOTES_CALC : ""
+           ,  'K_TBL_VOTES_RAW' => defined('K_TBL_VOTES_RAW') ? K_TBL_VOTES_RAW : ""
+           ,  'K_VOTE_VERSION' => defined('K_VOTE_VERSION') ? K_VOTE_VERSION : ""
+           ,  'K_VOTE_WINDOW_ANON' => defined('K_VOTE_WINDOW_ANON') ? K_VOTE_WINDOW_ANON : ""
+           ,  'K_VOTE_WINDOW_MEMBER' => defined('K_VOTE_WINDOW_MEMBER') ? K_VOTE_WINDOW_MEMBER : ""
            ,  'K_PAYPAL_CURRENCY' => K_PAYPAL_CURRENCY
            ,  'K_PAYPAL_EMAIL' => K_PAYPAL_EMAIL
            ,  'K_PAYPAL_USE_SANDBOX' => K_PAYPAL_USE_SANDBOX
