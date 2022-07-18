@@ -24,6 +24,10 @@
 
     Delete a file or, via special param, PHP's error_log.
 
+* ### [`<cms:eol>`](eol/)
+
+   "End-of-Line" tag echoes newline (aka ***PHP_EOL***).
+
 * ### [`<cms:if_empty>`](if_empty/)
 
     A combination of 2 tags &mdash; `<cms:if>` plus `<cms:not_empty>`.
