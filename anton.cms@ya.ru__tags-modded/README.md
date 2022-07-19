@@ -16,6 +16,10 @@
 
    Mod allows repeated definitions without showing "Error..".
 
+* ### [`<cms:gpc>`](gpc/)
+
+   Multi-selects, checkboxes in query string will be effectively sanitized and returned by 'gpc' tag as JSON-encoded string.
+
 * ### [`<cms:is_ajax>`](is_ajax/)
 
    Adding new parameter: **local_only**

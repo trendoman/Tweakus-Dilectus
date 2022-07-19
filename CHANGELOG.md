@@ -2,6 +2,8 @@
 
 *Latest on top*
 
+* ## [Modded tags » gpc](anton.cms@ya.ru__tags-modded/gpc)
+   Preprocess arrays in query string into JSON-encoded string and then sanitize.
 * ## [New tags » eol](anton.cms@ya.ru__tags-new/eol)
    "End-of-Line" tag echoes newline (aka ***PHP_EOL***).
 * ## [New tags » new](anton.cms@ya.ru__tags-new/new)

@@ -2,7 +2,9 @@
 
 Adds a new variable `k__gpc` to the global context. It contains values from **`G`ET**, **`P`OST**, **`C`OOKIE**.
 
-It is quite comfortable to use this variable instead of tag [**cms:gpc**](#related-tags).
+It is quite comfortable to use this variable instead of tag **[&lt;cms:gpc/&gt;](#related-tags)** to review all passed values.
+
+There is **absolutely no security sanitization** of values, so for the final coding, use 'gpc' tag for each value separately.
 
 ## Example
 
@@ -94,9 +96,13 @@ Output of the tag `<cms:dump_all/>` displays this variable before the user-defin
 
 `k__gpc: Array`
 
+---
+
+**Production server should not rely on values passed without security measures.** Use variable only during development to quickly peek into arrays. Then switch to 'gpc' tag.
+
 ## Related tags
 
-* [**Documentation &raquo; gpc**](https://docs.couchcms.com/tags-reference/gpc.html)
+* **[Documentation &raquo; gpc](https://docs.couchcms.com/tags-reference/gpc.html)**
 
 ## Installation
 
