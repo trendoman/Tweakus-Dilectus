@@ -9,7 +9,7 @@ Query string arrays of params, such as multi-select checkboxes will be managed b
 Declare a simple form to test how things now work –
 
 ```xml
-<cms:form method='get'>
+<cms:form method='get' name='_' anchor='0'>
    <cms:if k_success>
       <cms:abort>
          <h2>Printout of submitted multi-value checkbox:</h2>

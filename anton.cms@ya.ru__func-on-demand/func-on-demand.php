@@ -6,7 +6,11 @@
    *   @author @trendoman <tony.smirnov@gmail.com>
    *   @date   04.07.2022
    */
-
+   if( is_file(__DIR__.'/config.php') === false ){
+      echo 'Error: Addon "func-on-demand" could not open "config.php"';
+	  error_log( 'Error: Addon "func-on-demand" could not open config: '.__DIR__.'/config.php' );
+	  return;
+   }	
    require_once(__DIR__.'/config.php');
 
    class Autoload {

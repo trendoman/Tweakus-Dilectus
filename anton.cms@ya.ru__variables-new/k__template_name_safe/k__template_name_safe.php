@@ -13,7 +13,7 @@
 
         global $CTX, $FUNCS;
 
-        $tpl_name_safe = $FUNCS->get_clean_url( $CTX->get('k_template_name') );
+        $tpl_name_safe = $FUNCS->get_clean_url( defined('K_ADMIN') ? $_GET['o'] : $CTX->get('k_template_name') );
         $tpl_name_safe_ex = rtrim($tpl_name_safe, "ph");
         $tpl_name_safe_ex = rtrim($tpl_name_safe_ex, "-");
 
