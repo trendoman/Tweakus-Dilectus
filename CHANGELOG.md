@@ -2,6 +2,8 @@
 
 *Latest on top*
 
+* ## [New tags » back2utf](anton.cms@ya.ru__tags-new/back2utf)
+   Decodes escaped unicode such as `\u304a`
 * ## [Modded tags » gpc](anton.cms@ya.ru__tags-modded/gpc)
    Preprocess arrays in query string into JSON-encoded string and then sanitize.
 * ## [New tags » eol](anton.cms@ya.ru__tags-new/eol)
