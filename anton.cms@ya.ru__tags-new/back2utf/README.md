@@ -19,7 +19,7 @@ Convert escaped unicode such as `\u00f3` back to readable unicode.
    String may be passed as the first parameter (any name) in a self-closed tag fashion –
 
    ```xml
-   <cms:back2utf mysjon />
+   <cms:back2utf myjson />
    ```
 
 ## Example

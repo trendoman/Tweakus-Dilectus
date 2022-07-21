@@ -8,7 +8,7 @@
    *   @example  <cms:show case='lower' encoding='Windows-1251' />
    *   @author @dmore54, @trendoman <tony.smirnov@gmail.com>
    *   @date   20.05.2021
-   *   @last   30.06.2022
+   *   @last   21.07.2022
    */
 
    $FUNCS->add_event_listener( 'tag_show_executed', function ($tag_name, $params, $node, &$html) {
@@ -31,11 +31,15 @@
 
       switch ($case) {
          case "u":
+         case "up":
          case "upper":
+         case "uppercase":
            $type = MB_CASE_UPPER;
            break;
          case "l":
+         case "low":
          case "lower":
+         case "lowercase":
            $type = MB_CASE_LOWER;
            break;
          case "t":
