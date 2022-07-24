@@ -56,6 +56,10 @@
 
     Writes text data into files.
 
+* ### [`<cms:xquery>`](xquery/)
+
+    Extract content from HTML string via XPath queries.
+
 ## Installation
 
 Everything described in the dedicated [**INSTALL**](/INSTALL.md) page applies.
