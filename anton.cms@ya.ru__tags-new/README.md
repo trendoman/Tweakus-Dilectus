@@ -48,6 +48,10 @@
 
     Tag **show_json** beautifully prints JSON arrays or strings.
 
+* ### [`<cms:unindent>`](unindent/)
+
+    Removes excessive or entire indentation.
+
 * ### [`<cms:unset>`](unset/)
 
     Tag **unset** removes a variable or array key.

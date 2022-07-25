@@ -2,6 +2,8 @@
 
 *Latest on top*
 
+* ## [New tags » unindent](anton.cms@ya.ru__tags-new/unindent)
+   Removes excessive or entire indentation.
 * ## [New tags » xquery](anton.cms@ya.ru__tags-new/xquery)
    Extract content from HTML string via XPath queries.
 * ## [New tags » back2utf](anton.cms@ya.ru__tags-new/back2utf)
