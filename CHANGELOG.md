@@ -2,6 +2,8 @@
 
 *Latest on top*
 
+* ## [Variables » k__funcs](anton.cms@ya.ru__variables-new/k__funcs)
+   View your functions signatures.
 * ## [New tags » unindent](anton.cms@ya.ru__tags-new/unindent)
    Removes excessive or entire indentation.
 * ## [New tags » xquery](anton.cms@ya.ru__tags-new/xquery)
