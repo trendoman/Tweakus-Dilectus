@@ -1,0 +1,5 @@
+# do not include 'live' configs to repository
+
+/config.php
+/config-paths.php
+/funcs.dat.md

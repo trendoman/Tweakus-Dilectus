@@ -8,9 +8,9 @@
    */
    if( is_file(__DIR__.'/config.php') === false ){
       echo 'Error: Addon "func-on-demand" could not open "config.php"';
-	  error_log( 'Error: Addon "func-on-demand" could not open config: '.__DIR__.'/config.php' );
-	  return;
-   }	
+      error_log( 'Error: Addon "func-on-demand" could not open config: '.__DIR__.'/config.php' );
+      return;
+   }
    require_once(__DIR__.'/config.php');
 
    class Autoload {
@@ -202,6 +202,7 @@
             $splFile = new \SplFileInfo($path);
             $filepath = $splFile->getRealPath();
             if( false === $filepath ) continue;
+            if( true === array_key_exists( $func_name, static::$known_files ) ) continue;
 
             static::$known_files[$func_name] = $splFile;
 
