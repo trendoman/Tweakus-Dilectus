@@ -2,6 +2,8 @@
 
 *Latest on top*
 
+* ## [**Addon "SLING"**](https://github.com/trendoman/Tweakus-Dilectus/tree/main/anton.cms@ya.ru__sling)
+   Sling any code to background and make it the **Living code** without limits
 * ## [Variables » k__funcs](anton.cms@ya.ru__variables-new/k__funcs)
    View your functions signatures.
 * ## [New tags » unindent](anton.cms@ya.ru__tags-new/unindent)
